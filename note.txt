@@ -1,0 +1,1 @@
+@include background-gradient(to left, #a1000f, #d51314); // 自定义背景颜色渐变
