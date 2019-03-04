@@ -1155,3 +1155,7 @@
 @mixin color($val) {
     color: $val
 }
+
+@mixin text-decoration($val) {
+    text-decoration: $val
+}

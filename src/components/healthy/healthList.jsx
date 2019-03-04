@@ -1,48 +1,65 @@
 import React, { Component } from 'react'
-import { Card, Layout, Pagination  } from 'element-react'
+import api from '@/api/health'
+import { Card, Pagination, Breadcrumb } from 'element-react'
 
 class Comp extends Component {
-  // constructor (props) {
-  //   super(props);
-  // }
+  constructor (props) {
+    super(props);
+    this.state = {
+      list: [],
+      totalcord: 0
+    }
+  }
+
+  componentDidMount () {
+    api.requestData().then(data => {
+      console.log(data);
+      this.setState({
+        list: data,
+        totalcord: data.length,
+        currentPage: 1
+      })
+    })
+  }
+
   changePage () {
     console.log("changePage");
   }
   render () {
+    let listarr = this.state.list
+    let listHtml = [];
+    // if (listarr.length === 0) {
+    //   listHtml = <li>正在加载...</li>
+    // } else {
+    listarr.map((item, index) => {
+      if(index < 12){
+        listHtml.push(
+          <Card bodyStyle={{ padding: 0 }} key={ item.id }>
+            <img src={ item.image } alt={ item.type } />
+            <div style={{ padding: 14 }} className="listTit">
+              <span className='tit'>{ item.title }</span><br />
+              <span className='pingjia'>{ item.pingjia }</span><br />
+              <span className='emtitle'>{ item.emtitle }</span>
+            </div>
+          </Card>
+        )
+      }
+      return ''
+    })
     return (
       <div className="list">
+        <div className="title">
+          <h1>合理的饮食，是身体健康的第一要素</h1>
+          <Breadcrumb separator="|">
+            <Breadcrumb.Item>最新</Breadcrumb.Item>
+            <Breadcrumb.Item>最热</Breadcrumb.Item>
+          </Breadcrumb>
+        </div>
         <div className="cont">
-          <Layout.Row>
-            <Layout.Col span={ 8 } offset={ 0 }>
-              <Card bodyStyle={{ padding: 0 }}>
-                <img src="@/images/93aa18b7817f21322bf1632c6a7ad44c_150x150.jpg" alt="img" className="image" />
-                <div style={{ padding: 14 }}>
-                <span>图片的标题title</span>
-                  <div className="bottom clearfix">
-                    <span>7</span>评论
-                    <span>134</span>人气
-                  </div>
-                  <span>作者的别名author</span>
-                </div>
-              </Card>
-            </Layout.Col>
-            <Layout.Col span={ 8 } offset={ 2 }>
-              <Card bodyStyle={{ padding: 0 }}>
-                <img src="@/images/54aad9503158cf80a783eb13657079ff_150x150.jpg" alt="img" className="image" />
-                <div style={{ padding: 14 }}>
-                  <span>图片的标题title</span>
-                  <div className="bottom clearfix">
-                    <span>7</span>评论
-                    <span>134</span>人气
-                  </div>
-                  <span>作者的别名author</span>
-                </div>
-              </Card>
-            </Layout.Col>
-          </Layout.Row>
+          { listHtml }
         </div>
         <div className="block">
-          <Pagination layout="prev, pager, next, total, jumper" total={400} pageSize={12} currentPage={1} pager={100} onCurrentChange={ this.changePage.bind(this) }/>
+          <Pagination layout="prev, pager, next, total, jumper" total={ this.state.totalcord } pageSize={12} currentPage={ this.state.currentPage } onCurrentChange={ this.changePage.bind(this) }/>
         </div>
       </div>
     )

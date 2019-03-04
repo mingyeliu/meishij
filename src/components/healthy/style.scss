@@ -1,1 +1,114 @@
 @import '@/qunar/reset.scss';
+
+.top{
+  @include rect(100%, 118px);
+  @include align();
+  a{
+    // @include line-height(30px);
+    @include color(#000);
+    img{
+      @include rect(30px, 30px);
+      @include margin(0 10px 0 0);
+    }
+    span{
+      @include font-size(24px);
+    }
+  }
+  a:hover{
+    span{
+      @include text-decoration(underline); // 下划线
+    }
+  }
+}
+
+.tabHealthy{
+  .el-tabs__header{
+    @include rect(100%, 52px);
+    @include background-color(#fff3e3);
+   
+    .el-tabs__item{
+      @include rect(auto, 52px);
+      @include color(#000);
+      @include line-height(52px);
+    }
+    .is-active{
+      @include color(#f73b49);
+    }
+    .el-tabs__item:hover{
+      @include color(#f73b49);
+    }
+  }
+  .el-tabs__content{
+    .el-tab-pane{
+      @include flexbox();
+      @include flex-wrap(wrap);
+      .w200{
+        @include rect(200px, auto);
+      }
+      .w570{
+        @include rect(570px, auto);
+      }
+      dl{
+        dt{
+          @include color(#272727);
+          @include line-height(44px);
+          @include font-size(24px);
+        }
+        dd{
+          display: inline-block;
+          a{
+            @include padding(6px 12px);
+            @include color(#464646);
+            @include line-height(26px);
+            @include font-size(14px);
+          }
+          a:hover{
+            @include color(#fff);
+            @include background-color(#f73b49);
+          }
+        }
+      }
+    }
+  }
+}
+
+.title{
+  @include rect(100%, 118px);
+  @include align();
+  h1{
+    @include font-size(24px);
+  }
+}
+.cont{
+  @include rect(100%, auto);
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  .el-card{
+    @include rect(233px, 332px);
+    // @include border(1px solid #fff);
+    @include margin(0 0 20px 0);
+    img{
+      @include rect(233px, 233px);
+    }
+    .listTit{
+      @include font-size(12px);
+      @include line-height(24px);
+      .tit{
+        @include font-size(14px);
+        @include color(#222);
+      }
+      .pingjia{
+        @include color(#969696);
+      }
+      .emtitle{
+        @include color(#b94945);
+      }
+    }
+  }
+}
+
+.block{
+  @include margin(38px 0 58px 0);
+  @include align();
+}

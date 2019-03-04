@@ -1,6 +1,6 @@
 @import '@/qunar/reset.scss';
 html, body, #root, .page{
-  @include rect(100%, auto);
+  @include rect(100%, 100%);
 }
 .margin {
   @include rect(990px, auto);
@@ -10,6 +10,8 @@ html, body, #root, .page{
 .page {
   @include flexbox();
   @include flex-direction(column);
+  @include overflow();
+
   .header {
     @include rect(100%, 130px);
     @include background-gradient(to left, #a1000f, #d51314); // 自定义背景颜色渐变
@@ -18,9 +20,8 @@ html, body, #root, .page{
     @include rect(100%, 76px);
   }
   .content {
-    @include rect(100%, auto);
+    @include rect(100%, 1800px);
     @include background-color(#fbe8c8);
-    @include overflow();
   }
   .footer {
     @include rect(100%, 344px);

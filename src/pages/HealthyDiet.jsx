@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Breadcrumb } from 'element-react'
 import 'element-theme-default';
 import '@/components/healthy/style.scss';
 import { Link } from 'react-router-dom';
@@ -19,13 +18,6 @@ class Comp extends Component {
             </Link>
           </div>
           <HealthNav />
-          <div className="title">
-            <h1>合理的饮食，是身体健康的第一要素</h1>
-            <Breadcrumb separator="|">
-              <Breadcrumb.Item>最新</Breadcrumb.Item>
-              <Breadcrumb.Item>最热</Breadcrumb.Item>
-            </Breadcrumb>
-          </div>
           <HealthList />
           <HealthNew />
         </div>
