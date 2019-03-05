@@ -1159,3 +1159,7 @@
 @mixin text-decoration($val) {
     text-decoration: $val
 }
+
+@mixin font-family($val) {
+    font-family: $val
+}

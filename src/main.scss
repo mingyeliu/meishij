@@ -11,6 +11,7 @@ html, body, #root, .page{
   @include flexbox();
   @include flex-direction(column);
   @include overflow();
+  @include font-family(微软雅黑);
 
   .header {
     @include rect(100%, 130px);
@@ -20,11 +21,11 @@ html, body, #root, .page{
     @include rect(100%, 76px);
   }
   .content {
-    @include rect(100%, 1800px);
+    @include rect(100%, auto);
     @include background-color(#fbe8c8);
   }
   .footer {
-    @include rect(100%, 344px);
+    @include rect(100%, auto);
     @include background-color(#3f3b32);
   }
 }
