@@ -1,0 +1,31 @@
+@import '@/qunar/reset.scss';
+html, body, #root, .page{
+  @include rect(100%, 100%);
+}
+.margin {
+  @include rect(990px, auto);
+  @include margin(0 auto);
+}
+
+.page {
+  @include flexbox();
+  @include flex-direction(column);
+  @include overflow();
+  @include font-family(微软雅黑);
+
+  .header {
+    @include rect(100%, 130px);
+    @include background-gradient(to left, #a1000f, #d51314); // 自定义背景颜色渐变
+  }
+  .nav{
+    @include rect(100%, 76px);
+  }
+  .content {
+    @include rect(100%, auto);
+    @include background-color(#fbe8c8);
+  }
+  .footer {
+    @include rect(100%, auto);
+    @include background-color(#3f3b32);
+  }
+}

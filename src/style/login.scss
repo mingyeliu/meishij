@@ -1,0 +1,274 @@
+@import '@/qunar/reset.scss';
+
+.content{
+  @include padding(25px 0);
+  .main_w{
+    @include background-color(#ffffff);
+    @include rect(66%,auto);
+    @include margin(auto);
+    @include padding(0.4rem 0 0 0);
+    // @include fullscreen(100 relative)
+    .nl_title{
+      @include rect(100%,0.43rem);
+      @include margin(0 0 0.4rem 0);
+      @include text-align();
+      @include line-height(0.4rem);
+      @include font-size(0.26rem);
+      @include font-weight(300);
+      .left_span{
+        @include margin(0 0.24rem 0 0);
+      }
+      .right_span{
+        @include margin(0 0 0 0.24rem);
+      }
+    }
+    .nl_dsf_w1{
+      // @include background-color(red);
+      @include rect(100%,1.08rem);
+      @include text-align();
+      
+      a{
+        @include display(inline-block);
+        @include text-align();
+        @include rect(1.08rem,1.08rem);
+        // @include square(100%);
+        // @include background-color(red);
+        // @include background-color(red);
+        @include border-radius(50%);
+      }
+      a span{
+        @include border-radius(50%);
+        @include display(block);
+        @include rect(100%,100%);
+        @include text-align();
+        // @include background-color(#fae8c8);
+        
+      }
+      .n1_a2{
+        @include margin(0 0.64rem 0 0.64rem);
+      }
+      .span_a1{
+        background: url("https://s1.c.meishij.net/web1/images/nl_dsficon1.png") no-repeat;
+        // background-position-y: ;
+      }
+      .n1_a1 :hover{
+        background: url("https://s1.c.meishij.net/web1/images/nl_dsficon1.png") no-repeat;
+        background-position-y: -1.08rem;
+      }
+
+      .span_a2{
+        background: url("https://s1.c.meishij.net/web1/images/nl_dsficon1.png") no-repeat;
+        background-position-x: -1.08rem;
+      }
+      .n1_a2 :hover{
+        background: url("https://s1.c.meishij.net/web1/images/nl_dsficon1.png") no-repeat;
+        background-position:-1.08rem -1.08rem;
+      }
+      .span_a3{
+        background: url("https://s1.c.meishij.net/web1/images/nl_dsficon1.png") no-repeat;
+        background-position-x: -2.16rem;
+      }
+      .n1_a3 :hover{
+        background: url("https://s1.c.meishij.net/web1/images/nl_dsficon1.png") no-repeat;
+        background-position:-2.16rem -1.08rem;
+      }
+    }
+    .golink{
+      @include rect(100%, 600px);
+      @include margin(0.3rem 0 0 0 );
+      @include text-align();
+      // @include position(relative);
+      .link1{
+        @include line-height(0.66rem);
+        @include color(#333333);
+      }
+      a.link1:hover{
+        @include color(red);
+        @include text-decoration(underline);
+      }
+      .nl_moredsf{
+        @include rect(60%,auto);
+        @include margin(0 auto);
+        @include background-color(#cccccc);
+        // @include position(absolute);
+        a{
+          @include display(inline-block);
+          @include margin(0 0.2rem);
+          @include line-height(1.08rem);
+          @include font-size(0.12rem);
+        }
+        .a1 i{
+          @include display(inline-block);
+          @include rect(0.16rem,0.16rem);
+          @include line-height(1.10rem);
+          // @include padding(-0.2rem 0 0 0);
+          @include margin(0.45rem 0 0 0);
+          vertical-align: top;
+          background:url("https://s1.c.meishij.net/web1/images/nl_moredsf_icons.png") no-repeat;
+        }
+        .a2 i{
+          @include display(inline-block);
+          @include rect(0.16rem,0.16rem);
+          @include line-height(1.10rem);
+          // @include padding(-0.2rem 0 0 0);
+          @include margin(0.45rem 0 0 0);
+          vertical-align: top;
+          background:url("https://s1.c.meishij.net/web1/images/nl_moredsf_icons.png") no-repeat;
+          background-position-y: -0.16rem;
+        }
+        .a3 i{
+          @include display(inline-block);
+          @include rect(0.16rem,0.16rem);
+          @include line-height(1.10rem);
+          // @include padding(-0.2rem 0 0 0);
+          @include margin(0.45rem 0 0 0);
+          vertical-align: top;
+          background:url("https://s1.c.meishij.net/web1/images/nl_moredsf_icons.png") no-repeat;
+          background-position-y: -0.32rem;
+        }
+        .a4 i{
+          @include display(inline-block);
+          @include rect(16px,16px);
+          @include line-height(1.10rem);
+          // @include padding(-0.2rem 0 0 0);
+          @include margin(45px 0 0 0);
+          vertical-align: top;
+          background:url("https://s1.c.meishij.net/web1/images/nl_moredsf_icons.png") no-repeat;
+          background-position-y: -48px;
+        }
+        
+      }
+      .span_ok{
+        // @include margin(50px 0 0 0);
+        @include rect(100%,70px);
+        @include background-color(#ffffff);
+        // @include text-align();
+        span{
+          @include display(inline-block);
+          @include rect(40%,10px);
+          @include margin(30px 0 0 0);
+          background: url(https://s1.c.meishij.net/web1/images/nl_or.png) center no-repeat;
+        }
+      }
+      .tabs {
+        @include rect(50%,450px);
+        @include background-color(#f5f5f5);
+        @include margin(auto);
+        .shouji{
+          @include border(0 0 0 0 );
+          .username{
+            @include rect(60%,auto);
+            @include margin(5px auto);
+            .cuowu1 {
+              @include margin(5px 0 0 0);
+              @include text-align(left);
+              @include color(red);
+            }
+          }
+          .yanzheng{
+            @include rect(60%,auto);
+            @include margin (0px auto);
+            .yzm{
+              @include rect(60%, auto);
+              float: left;
+            }
+            .yzm_l{
+              float: left;
+              @include rect(40%, auto);
+              .btn_yan{
+                float: right;
+                width: 120px;
+                height: 40px;
+                @include background-color(#8fc31f);
+                color: #000000;
+              }
+            }
+          }
+          .pwd{
+            @include rect(60%,auto);
+            @include margin(10px auto);
+          }
+          .check{
+            @include rect(60%,auto);
+            @include text-align(left);
+            @include margin(0 auto);
+            // float: left;
+            .check_1{
+              a{
+                color:red;
+              }
+            }
+            .check_2{
+              // @include float(right);
+              .chec0{
+                @include rect(50%,auto);
+                float: left;
+              }
+              .chec1{
+                float: left;
+                @include rect(50%,auto);
+                @include text-align(right);
+              }
+            }
+          }
+          .zhuce{
+            @include rect(10%, auto);
+            @include margin(20px 60% 20px 40%);
+            .btn_zhu{
+              @include background-color(#ec5541);
+              @include color(white);
+              // @include margin(0 auto);
+            }
+          }
+        }
+        .youxiang{
+          @include border(0 0 0 0);
+          .you_user{
+            @include rect(60%,auto);
+            @include margin(5px auto);
+            
+          }
+          .you_pwd{
+            @include rect(60%,auto);
+            @include margin(20px auto);
+          }
+          .zhuce_1{
+            @include rect(10%, auto);
+            @include margin(40px 60% 20px 40%);
+            .btn_zhu{
+              @include background-color(#ec5541);
+              @include color(white);
+              // @include margin(0 auto);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.godeng{
+  @include rect(100%,35px);
+  @include margin(10px 0 0 0 );
+  @include line-height(35px);
+  @include background-color(#ffffff);
+  @include text-align();
+}
+.gozhu{
+  @include rect(100%,100px);
+}
+.active1 {
+  @include display(none);
+
+  transition: all 2s ease;
+  // transform: scale(0);
+  // @include overflow(hidden);
+  height: 0;
+}
+.active2 {
+  @include display(block);
+  transition: all 2s ease;
+  // @include overflow(hidden);
+  height: 102px;
+}
+

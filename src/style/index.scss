@@ -84,20 +84,49 @@
   }
 }
 
+// .nav{
+//   ul{
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     overflow: hidden;
+
+//     li{
+//       a{
+//         display: block;
+//         height: 76px;
+//         font:700 18px/76px "";
+//         color:#444;
+//         position: relative;
+
+//         img{
+//           display: block;
+//           width: 24px;
+//           height: 23px;
+//           position: absolute;
+//           right: -16px;
+//           top: 8px;
+//         }
+//       }
+//     }
+//   }
+// }
+
 .nav{
   ul{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow: hidden;
+    height: 76px;
 
-    li{
-      a{
+    li{  
+      .a1{
         display: block;
         height: 76px;
         font:700 18px/76px "";
         color:#444;
         position: relative;
+        padding: 0px 24px;
 
         img{
           display: block;
@@ -108,6 +137,118 @@
           top: 8px;
         }
       }
+    }
+
+    .te1{
+      background: url(https://s1.c.meishij.net/n/images/msj_menuarrow.gif) right center no-repeat;
+    }
+
+    .te1:hover{
+      background: #fafafa;
+    }
+
+    // 导航“菜谱大全”的二级菜单
+    .te2{
+      position: relative;
+      
+      .dw{
+        .dww{
+          width:930px;
+          margin:0px auto;
+          background:#fafafa;
+          position:relative;
+          box-shadow:3px 3px 5px rgba(0,0,0,0.1);
+          padding:18px 30px 24px;
+
+          .dwitem{
+            display:inline-block;
+            vertical-align:top;
+            *zoom:1;
+            *display:inline;
+            overflow:hidden;
+            white-space:nowrap;
+            padding:0px 10px 12px 0px;
+            
+            dl{
+              dt{
+                display:block;
+                height:24px;
+                line-height:24px;
+
+                a{
+                  color:#ff3232;
+                  font-size:17px;
+                  font-family:Microsoft Yahei,黑体;
+                  font-weight: 100;
+                }
+              }
+
+              dd{
+                display:inline-block;
+                vertical-align:top;
+                height:24px;
+                line-height:24px;
+                padding: 0;
+                padding-right:14px;
+
+                a{
+                  color:#999;
+                  font-size:12px;
+                  font-weight: 100;
+                }
+              }
+              a:hover{background:#ff3232;color:#fff;}
+            }
+          }
+          .dwitem_half{
+            width:330px;
+          }
+        }
+
+        .dww_cpdq{
+          .bgitem{
+            background:url(https://s1.c.meishij.net/n/images/jccp_navbgg.png) right bottom no-repeat;
+            position:absolute;
+            right:-60px;
+            bottom:-30px;
+            height:226px;
+            width:406px;
+          }
+        } 
+
+        .dww_ysjk{
+          .bgitem{
+            background:url(https://s1.c.meishij.net/n/images/ysjk_navbg.png) right bottom no-repeat;
+            position:absolute;
+            right:-60px;
+            bottom:-30px;
+            height:208px;
+            width:325px;
+          }
+        }
+      }
+      .te5{
+        position: absolute;
+        top: 76px;
+        left: -99px;
+        width:100%;
+        display: none;
+      }
+      .te6{
+        position: absolute;
+        top: 76px;
+        left: -226px;
+        width:100%;
+        display: none;
+      }
+    }
+    .te3:hover .dw{
+      display: block;
+      z-index: 1;
+    }
+    .te4:hover .dw{
+      display: block;
+      z-index: 1;
     }
   }
 }

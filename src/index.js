@@ -5,14 +5,13 @@ import PersApp from './layout/PersApp';
 import OtherApp from './layout/OtherApp';
 import App from './layout/App';
 import * as serviceWorker from './serviceWorker';
-import './main.scss';
-import '@/style/index.scss'
+import '@/style/main.scss';
 
 ReactDOM.render(
   <Router>
     <Switch>
       <Route path="/personal" component = { PersApp } />
-      <Route path="/healthy" component = { OtherApp } />
+      <Route path="/other" component = { OtherApp } />
       <Route path="/" component = { App } />
     </Switch>
   </Router>,

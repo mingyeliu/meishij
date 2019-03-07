@@ -1,2 +1,3 @@
 @include background-gradient(to left, #a1000f, #d51314); // 自定义背景颜色渐变
+@include text-decoration($val); // none 默认 / underline 下划线 /  overline 文本上的线 /  line-through 删除线
 +

@@ -1,0 +1,45 @@
+@import '@/qunar/reset.scss';
+
+.persContent {
+  @include rect(100%, auto);
+  @include background-color(#fbe8c8);
+
+  .titpers{
+    @include align();
+    @include font-size(24px);
+    @include line-height(120px);
+    @include color(#232323);
+  }
+  .contpers{
+    @include rect(100%, 210px);
+    @include background-color(#fff);
+  }
+  .navpers{
+    ul{
+      @include rect(100%, 90px);
+      @include flexbox();
+      @include padding(16px 0);
+      i{
+        @include rect(auto, 58px);
+        @include font-size(12px);
+        @include line-height(58px);
+        @include color(#0f0f0f);
+        @include margin(0 20px);
+      }
+      i:hover{
+        @include color(#ff3232);
+        @include text-decoration(underline);
+      }
+      .active{
+        @include color(#ff3232);
+        @include padding(23px 0);
+        @include border(0 0 2px 0, #ff3232, solid);
+      }
+    }
+  }
+  .menupers{
+    @include rect(100%, 410px);
+    @include background-color(#fff);
+    @include margin(0 0 40px 0);
+  }
+}
