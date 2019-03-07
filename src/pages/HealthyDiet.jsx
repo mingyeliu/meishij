@@ -4,7 +4,7 @@ import '@/components/healthy/style.scss';
 import { Link } from 'react-router-dom';
 import HealthNav from '@/components/healthy/healthNav';
 import HealthList from '@/components/healthy/healthList';
-import HealthNew from '@/components/healthy/healthNew';
+// import HealthNew from '@/components/healthy/healthNew';
 
 class Comp extends Component {
   render () {
@@ -19,7 +19,7 @@ class Comp extends Component {
           </div>
           <HealthNav />
           <HealthList />
-          <HealthNew />
+          {/* <HealthNew /> */}
         </div>
       </div>
     )

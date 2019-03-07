@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Card, Layout } from 'element-react'
-import './style.scss'
 
 class Comp extends Component {
   // constructor (props) {

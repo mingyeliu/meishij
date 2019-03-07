@@ -6,33 +6,50 @@ class Comp extends Component {
   constructor (props) {
     super(props);
     this.state = {
+      data: [],
       list: [],
-      totalcord: 0
+      totalcord: 0, // 数据总数
+      currentPage: 1, // 输入框改变的值
+      numberPage: 1 // 单机分页按钮的页数
     }
   }
 
   componentDidMount () {
     api.requestData().then(data => {
-      console.log(data);
+      // console.log(data);
       this.setState({
+        data: data,
         list: data,
-        totalcord: data.length,
-        currentPage: 1
+        totalcord: data.length
       })
     })
   }
 
   changePage () {
-    console.log("changePage");
+    let number = document.getElementsByClassName('active')[0].innerHTML*1;
+    let arr = [];
+    let count = 0;
+    for (let i = (number - 1)*12; i < this.state.data.length; i++) {
+      if(count < 12){
+        console.log(i);
+        arr.push(this.state.data[i]);
+        count++;
+      } else {
+        break;
+      }
+    }
+    this.setState({
+      list: arr
+    })
+    console.log(arr);
   }
+
   render () {
     let listarr = this.state.list
     let listHtml = [];
-    // if (listarr.length === 0) {
-    //   listHtml = <li>正在加载...</li>
-    // } else {
+    let count = 0;
     listarr.map((item, index) => {
-      if(index < 12){
+      if(count < 12){
         listHtml.push(
           <Card bodyStyle={{ padding: 0 }} key={ item.id }>
             <img src={ item.image } alt={ item.type } />
@@ -43,6 +60,7 @@ class Comp extends Component {
             </div>
           </Card>
         )
+        count++;
       }
       return ''
     })
