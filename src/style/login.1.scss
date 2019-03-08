@@ -43,6 +43,8 @@
         @include display(block);
         @include rect(100%,100%);
         @include text-align();
+        // @include background-color(#fae8c8);
+        
       }
       .n1_a2{
         @include margin(0 0.64rem 0 0.64rem);
@@ -144,7 +146,6 @@
         @include background-color(#ffffff);
         // @include text-align();
         span{
-          
           @include display(inline-block);
           @include rect(40%,10px);
           @include margin(30px 0 0 0);
@@ -178,7 +179,7 @@
               @include rect(40%, auto);
               .btn_yan{
                 float: right;
-                // width: 120px;
+                width: 120px;
                 height: 40px;
                 @include background-color(#8fc31f);
                 color: #000000;
@@ -209,7 +210,6 @@
                 float: left;
                 @include rect(50%,auto);
                 @include text-align(right);
-
               }
             }
           }
@@ -219,7 +219,6 @@
             .btn_zhu{
               @include background-color(#ec5541);
               @include color(white);
-              @include margin(20px 0);
               // @include margin(0 auto);
             }
           }
@@ -240,29 +239,12 @@
             @include margin(40px 60% 20px 40%);
             .btn_zhu{
               @include background-color(#ec5541);
-              @include color(#fff);
-              @include margin(20px 0 0 0);
+              @include color(white);
+              // @include margin(0 auto);
             }
           }
         }
       }
-    }
-  }
-}
-
-.check_2_1{
-  // @include float(right);
-  .chec0{
-    @include rect(50%,auto);
-    float: left;
-    @include margin(0 0 0 20px);
-  }
-  .chec1{
-    float: left;
-    @include rect(30%,auto);
-    @include text-align(right);
-    span{
-      @include margin(0 20px 0 0);
     }
   }
 }
@@ -275,10 +257,11 @@
   @include text-align();
 }
 .gozhu{
-  @include rect(100%,120px);
+  @include rect(100%,100px);
 }
 .active1 {
   @include display(none);
+
   transition: all 2s ease;
   // transform: scale(0);
   // @include overflow(hidden);
@@ -290,3 +273,4 @@
   // @include overflow(hidden);
   height: 102px;
 }
+

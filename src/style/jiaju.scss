@@ -1,0 +1,270 @@
+@import '@/qunar/reset.scss';
+
+.content{
+  // @include z-index(1);
+  .margin{
+    .bbtitles{
+      @include rect(100%,120px);
+      @include line-height(120px);
+      @include text-align();
+      @include font-size(24px);
+      @include font-family("Microsoft Yahei");
+      @include color(#222);
+    }
+    .jjg_top{
+      @include rect(100%,300px);
+      @include background-color(#fff);
+      @include flexbox();
+      @include fullscreen(2, relative);
+      .jjg_menu{
+        @include rect(251px,100%);
+        // @include background-color(rgb(173, 62, 62));
+        @include border(0px 1px 0px 0px, #ccc, solid );
+        @include margin(0);
+        @include padding(0);
+        .jjg_menu_item{
+          @include rect(100%,75px);
+          @include border(0 0 1px 0, #ccc,solid);
+          @include padding(22px 0 22px 0);
+          background:url("https://s1.c.meishij.net/n/images/jjg_menuicons.gif") no-repeat;
+          background-position-y: -15px;
+          padding-left:60px;
+          .a_1{
+            @include line-height(30px);
+            @include font-size(18px);
+            font-weight: bold;
+            @include color(#333);
+          }
+        }
+        .image_menu02{
+          background-position-y: -610px;
+        }
+        .image_menu2:hover{
+          background-position-y: -910px;
+          @include background-color(#ff3232);
+          .menu2_left{
+            @include display(block);
+          }
+        }
+        .image_menu03{
+          background-position-y: -1215px;
+        }
+        .image_menu03:hover{
+          background-position-y: -1515px;
+          @include background-color(#ff3232);
+          .menu3_left{
+            @include display(block);
+          }
+        }
+        .image_menu04{
+          background-position-y: -2415px;
+        }
+        .image_menu04:hover{
+          background-position-y: -2715px;
+          @include background-color(#ff3232);
+          .menu4_left{
+            @include display(block);
+          }
+        }
+        .image_menu1:hover{
+          background-position-y: -315px;
+          @include background-color(#ff3232);
+          .menu1_left{
+            display: block;
+          }
+          
+          // z-index: 10;
+        }
+      }
+      .jjg_top_right{
+        @include rect(738px,300px);
+        // @include background-color(red);
+        @include padding(0);
+        .index_imgbox{
+          @include padding(10px);
+          img{
+            @include rect(718px,280px);
+          }
+        }
+      }
+    }
+    .jjg_titles{
+      @include rect(100%,120px);
+      @include line-height(120px);
+      @include text-align(left);
+      @include font-size(20px);
+      @include align();
+      @include font-family("Microsoft Yahei");
+      .jjg_a{
+        @include float(right);
+        @include color(#222);
+      }
+    }
+    .jjg_con1{
+      @include rect(100%,272px);
+      @include flexbox();
+      @include background-color(#fff);
+      @include padding(20px 0 20px 20px);
+      .jjg_a01{
+        @include display(block);
+        @include margin(0 20px 0 0);
+        img{
+          @include square(232px);
+        }
+      }
+      .contc{
+        @include rect(212px,232px);
+        @include fullscreen(relative);
+        @include border(0 1px 0 0,solid, #ccc);
+        h4{
+          @include rect(100%,auto);
+          @include margin(0 0 15px 0);
+          .yacont{
+            @include color(#222);
+            @include font-size(18px);
+          }
+        }
+        .marg_count{
+          @include margin(5px 0 0 0);
+          .contt{
+            @include font-size(12px);
+          }
+          .cont_strong{
+            @include display(inline-block);
+            @include color(red);
+          }
+        }
+        .yacont:hover{
+          @include color(red);
+        }
+        .btn_count{
+          @include rect(100px,40px);
+          @include background-color(#f33e51);
+          .cha_btn{
+            @include display(block);
+            @include line-height(40px);
+            @include color(#fff);
+            @include text-align();
+          }
+        }
+        .btn_count:hover{
+          @include background-color(red);
+        }
+      }
+    }
+    .jjg_foodsitem {
+      @include rect(100%,396px);
+      @include flexbox();
+      @include background-color(#fff);
+      .jjg_foods_left{
+        @include rect(198px,100%);
+        // @include background-color(rgb(236, 104, 104));
+        .foods_left{
+          @include padding(18px 24px 10px 20px);
+          @include font-size(26px);
+          @include line-height(20px);
+          .food_t{
+            @include margin( 2px 10px 0 0);
+            @include display(inline-block);
+            @include padding(4px 0 0 0 );
+            @include rect(4px,24px);
+            @include background-color(#999999);
+          }
+        }
+        .jjg_foods_left_list{
+          @include padding(10px 0 0 18px );
+          .left_list_li{
+            @include rect(100%,24px);
+            @include line-height(24px);
+            // @include background-color(white);
+            text-indent: 14px;
+            .left_list_a{
+              @include display(block);
+              @include rect(100%,24px);
+              // @include background-color(white);
+              @include color(#999);
+            }
+            .acite_a{
+              @include background-color(#999);
+              @include color(white);
+            }
+          } 
+        }
+      }
+      .jjg_foods_show{
+        @include rect(792px,396px);
+        .jiajuList{
+          @include flexbox();
+          @include flex-wrap(wrap);
+
+          .showitems{
+            @include margin(0);
+            @include padding(0);
+            @include font-size(12px);
+  
+            .small_food_list{
+              @include rect(198px,198px);
+              // @include float(left);
+              @include border(0 1px 1px 0,#ccc solid);
+              img {
+                @include display(block);
+                @include rect(197px,197px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.bg_left{
+  background: url("https://s1.c.meishij.net/n/images/jjg_goodsbg_1.png") no-repeat;
+  background-position-x: -10px;
+  @include rect(100%,160px);
+}
+.block1{
+  display: none;
+}
+.menu1_left, .menu2_left, .menu3_left,.menu4_left{
+  @include rect(345px,auto);
+  @include background-color(white);
+  @include fullscreen(absolute);
+  @include padding(10px 30px 10px 20px);
+  left:251px;
+  top: 0px;
+  display: none;
+  .ul1{
+    @include rect(100%,auto);
+    // @include background-color(red);
+    @include margin(0 0 20px 0);
+    .a_2{
+      @include color(#f33e51);
+      font-weight: 700;
+    }
+    .a_2:hover{
+      text-decoration: underline;
+    }
+    li{
+      
+      .b_3{
+        @include font-size(12px);
+        @include color(#b1b1b1);
+        font-weight:lighter;
+        @include margin(0 20px 5px 0);
+      }
+      .b_3:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.clear_line{
+  @include border(0 0 0 0, #ccc,solid);
+}
+.jfl_l1{
+  @include background-color(#ECEFFF);
+}
+
+.jfl_l2{
+  @include background-color(#FFF9E8);
+}

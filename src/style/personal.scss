@@ -13,6 +13,25 @@
   .contpers{
     @include rect(100%, 210px);
     @include background-color(#fff);
+    @include flexbox();
+    .aImg{
+      @include rect(210px, 210px);
+      img{
+        @include rect(100%, 100%);
+      }
+    }
+    .cont-c{
+      @include rect(530px, 210px);
+      @include margin(0 0 0 20px);
+      .neck{
+        span{
+          @include font-size(22px);
+        }
+      }
+      .total .adit{
+        @include font-size(12px);
+      }
+    }
   }
   .navpers{
     ul{

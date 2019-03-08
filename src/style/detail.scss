@@ -1,0 +1,228 @@
+.content {
+  // background: #666;
+  .margin {
+    .c-top {
+      .title {
+        height: 88px;
+        font-size: 18px;
+        color: #333;
+        padding: 0px 5px;
+        line-height: 88px;
+
+        span {
+          display: inline-block;
+          color: #333;
+          &:hover {
+            text-decoration: underline;
+            color: #ff3232;
+          }
+        }
+
+        s {
+          font-weight: bold;
+          margin: 0 5px;
+        }
+      }
+
+      .img-main {
+        background: #fff;
+        margin-bottom: 20px;
+        overflow: hidden;
+
+        .img-l {
+          width: 328px;
+          display: block;
+          float: left;
+          img {
+            height: 100%;
+          }
+        }
+
+        .img-r {
+          float: right;
+          width: 662px;
+          overflow: hidden;
+          position: relative;
+
+          .img-r-t {
+            margin-top: 18px;
+            padding-left: 25px;
+            border-bottom: 1px solid #eee;
+            height: 159px;
+
+            h1 {
+              max-width: 288px;
+              line-height: 44px;
+              font-size: 30px;
+              color: #333;
+              display: inline-block;
+              font-weight: 400;
+              padding: 10px 0;
+              // font-size: 40px;
+            }
+
+            .erweima {
+              display: inline-block;
+              vertical-align: top;
+              width: 52px;
+              height: 52px;
+              margin-top: 5px;
+              margin-left: 10px;
+              // position: relative;
+            }
+
+              p {
+                background: #ff3232;
+                color: #fff;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                height: 50px;
+                width: 57px;
+                border: 1px solid #e90808;
+                line-height: 48px;
+                border-right: 0px;
+                position: absolute;
+                right: 200px;
+                top: 20px;
+                &:hover {
+                  background: #f11111;
+                }
+              }
+              .fenxiang {
+                height: 50px;
+                width: 168px;
+                background: #eee;
+                color: #333;
+                border: 1px solid #999;
+                position: absolute;
+                top:20px;
+                right: 31.52px;
+                span {
+                  font-size: 14px;
+                  font-weight: bold;
+                  color: #999;
+                  text-align: right;
+                  line-height: 50px;
+                  margin-left: 16px;
+                }
+                img {
+                  margin: 0 5px;
+                }
+              }
+              ul {
+                height: 34px;
+                width: 540px;
+                overflow: hidden;
+                margin-top: 20px;
+                li {
+                  float: left;
+                  font-size: 14px;
+                  background: #60a531;
+                  border: 1px solid #46811d;
+                  height: 32px;
+                  padding: 0px 8px;
+                  line-height: 32px;
+                  color: #fff;
+                  text-align: center;
+                  margin-right: 10px;
+                }
+              }
+          }
+          .jieshao {
+            border-bottom: 1px solid #eee;
+            p {
+              line-height: 30px;font-size: 14px;margin: 20px 24px;color: #666;
+              strong {
+                font-size: 24px;color: #ddd;font-family: arial;font-weight: bold;padding: 0px 3px;
+              }
+            }
+          }
+          .user {
+            overflow: hidden;
+            margin: 0 25px;
+            margin-top: 20px;
+            img {
+              display: block;float: left;border-radius: 38px;
+            }
+            .user-con {
+              float: left;padding-left: 15px;
+              margin-top: 8px;
+              span {
+                color: #ff3232;display: inline-block;vertical-align: top;height: 22px;font-weight: 400;               
+              }
+              .V {
+                color: #ff3232;display: inline-block;height: 22px;width: 22px;
+                background: url(https://s1.c.meishij.net/n/images/vip_20.png) center no-repeat;
+              }
+              p.xinxi {
+                line-height: 24px;color: #666;margin-top: 4px;font-weight: 400;
+              }
+              strong {
+                line-height: 24px;color: #999;margin-top: 10px;font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
+    .c-bottom {
+      padding-bottom: 20px;
+      overflow: hidden;
+      .c-bottom-l {
+        float: left;
+        width: 670px;
+        background: #fff;
+        padding-bottom: 20px;
+        h2 {
+          font-size: 24px;color: #333;height: 66px;line-height: 66px;border-bottom: 1px solid #eee;text-indent: 24px;font-family: Microsoft Yahei;
+          font-weight: 400;
+        }
+        .way {
+          padding: 20px 0px;color: #666;font-size: 14px;
+          .way1 {
+            line-height: 24px;
+            em {
+              font-size: 50px;color: #ff3232;text-align: center;font-family: arial;height: 50px;width: 100px;display: block;float: left;line-height: 50px;
+            }
+            .way1-c {
+              float: left;width: 550px;
+              p {
+                line-height: 24px;color: #666;padding: 10px 20px 20px 0px;font-size: 14px;
+              }
+              img {
+                max-width: 550px;margin: 0px auto;display: block;padding-bottom: 10px; 
+              }
+            }
+            h3.tt {
+              font-size: 24px;color: #333;line-height: 66px;border-bottom: 1px solid #eee;text-indent: 24px;font-family: Microsoft Yahei;
+              font-weight: 400;background: #fff;
+            }
+            .swiper {
+              margin: 20px 20px 60px 100px;width: 550px;height: 366px;
+              img {
+                display: block;width: 550px;height: 412px;
+              }
+            }
+            p.jiqiao {
+              padding-left: 100px;line-height: 24px;color: #666;font-size: 14px;width: 633px;
+              margin-top: 15px;
+            }
+          }
+        }
+      }
+      .c-bottom-r {
+        float: right;
+        ul {
+          li {
+            display: block;
+            background: #fff;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}

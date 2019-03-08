@@ -1163,3 +1163,7 @@
 @mixin font-family($val) {
     font-family: $val
 }
+
+@mixin float($val) {
+    font-family: $val
+}

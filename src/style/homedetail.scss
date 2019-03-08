@@ -1,0 +1,128 @@
+.content {
+  padding-top: 0;
+  .top {
+    height: 64px;
+    background:rgba(253, 253, 253, 0.5);
+    ul {
+      width:990px;
+      overflow: hidden;
+      li {
+        float: left;
+        a{
+          line-height: 64px;
+          padding: 0px 30px;
+          font-size: 14px;
+          font-weight: bold;
+          color: #444;
+           &:hover {
+            color: #d61214;
+            text-decoration: underline;
+          }
+        }
+        .active{
+          color: #d61214;
+        }
+      }
+    }
+  }
+  .products-buy {
+    .margin {
+      p.title {
+        height: 60px;
+        line-height: 60px;
+        color: #666;
+        font-size: 12px;
+        span {
+          padding: 0px 6px;
+          &:hover {
+            color: red;
+          }
+        }
+      }
+
+      .products-buy-content {
+        overflow: hidden;
+        background: #fff;
+        .pbc-l {
+          float: left;
+          padding: 20px 0px 20px 20px;
+          .img-big {
+            display: block;
+            height: 450px;
+            width:  450px;
+          }
+          .img-small {
+            height: 97px;
+            width: 97px;
+            display: block;
+            border: 4px solid #ff3232;
+            margin-top: 10px;  
+          }
+        }
+        .pbc-r {
+          float: left;
+          padding: 20px 20px 0px 20px;
+          h1 {
+            color: #333;
+            font-size: 24px;
+            font-family: Microsoft Yahei,黑体;
+            line-height: 32px;
+            padding: 20px 10px 20px 0px;
+            font-weight: 400;
+          }
+          #orderform {
+            .buy-tab {
+              height: 39px;
+              width: 478px;
+              background: #eee;
+              padding: 1px 1px 0px;
+              span {
+                background: #fff;
+                color: #ff3232;
+                display: inline-block;
+                height: 39px;
+                line-height: 39px;
+                padding: 0px 20px;
+                font-size: 12px;
+              }
+            }
+
+            .buy-tab-1 {
+              width: 480px;
+              ul {
+                width: 478px;padding: 10px 20px 15px;border: 1px solid #eee;border-top: 0px;
+                li {
+                  height: 48px;line-height: 48px;font-size: 14px;color: #666;
+                  strong.price {
+                    font-size: 24px;font-weight: bold;font-family: Microsoft Yahei,黑体;color: #ff3232;
+                  }
+                  strong.price-favorable {
+                    color: #ccc;text-decoration: line-through;font-size: 24px;font-weight: bold;font-family: Microsoft Yahei,黑体;
+                  }
+                  span.price-favorable-title {
+                    font-size: 12px;color: #999;line-height: 16px;padding: 0px 20px 10px 10px;margin-top: 16px;display: inline-block;
+                    background: url(https://s1.c.meishij.net/n/images/drzx_tip_bg.gif) right top no-repeat;
+                  }
+                  span.star {
+                    height: 16px;width: 84px;display: inline-block;vertical-align: top;margin-top: 16px;
+                    background: url(https://s1.c.meishij.net/n/images/jjg_stars.gif)  no-repeat;
+                    background-position: 0px -160px;margin-right: 20px;
+                  }
+                  input {
+                    border: 1px solid #eee;background: #f5f5f5;height: 40px;width: 40px;padding: 12px 0px;width: 44px;text-align: center;line-height: 20px;margin: 0px 10px;vertical-align: middle;
+                  }
+                }
+              }
+              span.buy {
+                display: inline-block;height: 48px;padding: 0px 18px;line-height: 48px;color: #fff;font-size: 14px;font-weight: bold;background: #ff3232;text-align: center;margin-top: 20px;margin-right: 10px;
+              }
+              span.dingdan {
+                display: inline-block;height: 48px;padding: 0px 18px;line-height: 48px;color: #fff;font-size: 14px;font-weight: bold;background: #ff3232;text-align: center;margin-top: 20px;margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

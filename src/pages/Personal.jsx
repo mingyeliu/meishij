@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+// import { Link } from 'react-dom'
+import { Divider } from 'antd'
+import "antd/dist/antd.css"
 
 class Comp extends Component {
   // constructor (props) {
@@ -22,7 +25,27 @@ class Comp extends Component {
       <div className = "persContent">
         <div className="margin">
           <div className="titpers">欢迎来到我的美食空间</div>
-          <div className="contpers"></div>
+          <div className="contpers">
+            <div className="aImg"><img src="https://s1.c.meishij.net/images/default/tx2_1.png" alt="头像"/></div>
+            <div className="cont-c">
+              <div className="neck">
+                <span>空白666</span>
+                <button className="btnGrade">LV1</button>
+                <button className="myletter">我的私信</button>
+              </div>
+              <div className="total">
+                <span>积分：24</span>
+                <Divider type="vertical" />
+                <span>经验值：6</span>
+              </div>
+              <div className="adit">
+                2019-03-19加入美食杰
+                <Divider type="vertical" />
+                <span>编辑个人资料</span>
+              </div>
+            </div>
+            <div className="cont-r"></div>
+          </div>
           <div className="navpers">
             <ul>
               <li className="anav"><i className="active">动态</i></li>

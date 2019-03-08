@@ -11,7 +11,7 @@ ReactDOM.render(
   <Router>
     <Switch>
       <Route path="/personal" component = { PersApp } />
-      <Route path="/other" component = { OtherApp } />
+      <Route path="/j" component = { OtherApp } />
       <Route path="/" component = { App } />
     </Switch>
   </Router>,

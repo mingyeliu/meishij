@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Tabs, Input, Icon, Button, Checkbox, Popover } from 'antd'
+import { Tabs, Input, Icon,Button,Checkbox,Popover } from 'antd'
 import '@/style/login.scss'
 import "antd/dist/antd.css"
-import store from '@/store'
+import store from '../store'
 import action from '@/store/user/action'
 
 class Comp extends Component {
   constructor (props){
     super(props);
     this.handler = this.handler.bind(this);
-    this.handler1 = this.handler1.bind(this); 
+    this.handler1 = this.handler1.bind(this);
     this.handlerpwd = this.handlerpwd.bind(this);
     this.onCheck = this.onCheck.bind(this);
     this.state={
@@ -25,52 +25,21 @@ class Comp extends Component {
       emailpwd:'',
       check01: true,
       check02: true,
-      content1:"",
-      content2:""
+      content1:""
     }
   }
-  componentWillMount(){
+  componentDidMount(){
     var a = localStorage.getItem('check01');
     var usern = localStorage.getItem('isLogin')
-    var pass = localStorage.getItem('pwd')
-    console.log(usern)
-    if(a === "true"){
+    var pass = this.state.password
+    if(a === true){
       this.setState({
         uservalue:usern,
         password:pass
       })
     console.log(usern)
-    localStorage.setItem('check01',false);
     console.log(this.state.check01)
     }else{
-      this.setState({
-        uservalue:"",
-        password:""
-      })
-      localStorage.setItem('isLogin',"")
-      localStorage.setItem('pwd',"")
-      console.log('不记密码')
-    }
-    var b = localStorage.getItem('check02');
-    var usern1 = localStorage.getItem('isLogin_you')
-    var pass1 = localStorage.getItem('pwd1')
-    // this.state.emailpwd
-    console.log(usern1)
-    if(b === "true"){
-      this.setState({
-        emailvalue:usern1,
-        emailpwd:pass1
-      })
-    console.log(usern1)
-    localStorage.setItem('check02',false);
-    console.log(this.state.check02)
-    }else{
-      this.setState({
-        emailvalue:"",
-        emailpwd:""
-      })
-      localStorage.setItem('isLogin_you',"")
-      localStorage.setItem('pwd1',"")
       console.log('不记密码')
     }
   }
@@ -136,53 +105,29 @@ class Comp extends Component {
     localStorage.setItem('check01',this.state.check01)
     // localStorage.setItem('check02',this.state.check02)
   }
-  onCheck1 (event) {
-    console.log(event);
-    // console.log(`checked = ${event.target.checked}`);
-    this.setState({
-      check02: !event.target.checked
-      // check02: event.target.checked
-    })
-    console.log(this.state.check02);
-    localStorage.setItem('check02',this.state.check02)
-    // localStorage.setItem('check02',this.state.check02)
-  }
   onLogin(){
-    console.log(this.state.uservalue)
     store.dispatch(action.requestData1(this.state.uservalue)).then(data=>{
-      var login = data.data[0];
+      var login = data.data[0] 
       console.log(data.data[0]);
       if(login.username === this.state.uservalue && this.state.password === login.password){
         console.log("登录成功")
-        if(!this.state.check01 === true){
-          console.log(this.state.check01)
-          localStorage.setItem('isLogin',this.state.uservalue);
-          localStorage.setItem('pwd',this.state.password);
-        }else{
-          localStorage.setItem('isLogin',"");
-          localStorage.setItem('pwd',"");
-        }
+        localStorage.setItem('isLogin',this.state.uservalue);
         console.log(this);
         this.setState({
           content1: "登录成功"
         })
-      }else if(login.username !== this.state.uservalue ){
+      }else{
         console.log("登录失败")
         this.setState({
-          content1: "未找到该用户",
-          uservalue:''
-        })
-      }else if(login.username === this.state.uservalue && this.state.password !== login.password){
-        this.setState({
-          content1: "密码错误"
+          content1: "登录失败"
         })
       }
     })
-    // if(!this.state.check01 === true) {
-    //   console.log(this.state.uservalue);
-    //   // console.log(this.state.yamvalue);
-    //   console.log(this.state.password);
-    // }
+    if(this.state.check01 === true) {
+      console.log(this.state.uservalue);
+      // console.log(this.state.yamvalue);
+      console.log(this.state.password);
+    }
   }
   handlemail (event){
     this.setState({
@@ -196,43 +141,36 @@ class Comp extends Component {
     })
   }
   onLogin_you(){
-    console.log("11111")
-    // if(!this.state.check02 === true) {
-    store.dispatch(action.requestData1(this.state.emailvalue)).then(data=>{
-      var login = data.data[0]
-      console.log(data.data[0])
-      if(login.username === this.state.emailvalue && login.password === this.state.emailpwd){
-        if(this.state.check02 !== true) {
-          localStorage.setItem('isLogin_you',this.state.emailvalue);
-          localStorage.setItem('pwd1',this.state.emailpwd);
+    if(this.state.check02 === true) {
+      store.dispatch(action.requestData1(this.state.emailvalue)).then(data=>{
+        var login = data.data[0]
+        console.log(data.data[0])
+        if(login.username === this.state.emailvalue){
+          console.log("登录成功")
+          this.setState({
+            content1: "登录成功"
+          })
         }else{
-          localStorage.setItem('isLogin_you',"");
-          localStorage.setItem('pwd1',"");
+          console.log("登录失败")
+          this.setState({
+            content1: "登录失败"
+          })
         }
-        console.log("登录成功")
-        this.setState({
-          content2: "登录成功"
-        })
-      }else{
-        console.log("登录失败")
-        this.setState({
-          content2: "登录失败"
-        })
-      }
-    })
-    console.log(this.state.emailvalue)
-    console.log(this.state.emailpwd)
-    // }
+      })
+      console.log(this.state.emailvalue)
+      console.log(this.state.emailpwd)
+      
+    }
   }
   render () {
     const TabPane = Tabs.TabPane;
     return (
-      <div className="contentLogin">
-        <div className="main_w">
+      <div className = "contentLogin">
+         <div className="main_w">
           <h3 className="nl_title">
-            <span className="left_span"><img src="https://s1.c.meishij.net/web1/images/nl_title_left.png" alt="123" /></span>
+            <span className="left_span"><img src="https://s1.c.meishij.net/web1/images/nl_title_left.png" alt="线" /></span>
               登录美食杰
-            <span className="right_span"><img src="https://s1.c.meishij.net/web1/images/nl_title_right.png" alt="123" /></span>
+            <span className="right_span"><img src="https://s1.c.meishij.net/web1/images/nl_title_right.png" alt="线" /></span>
           </h3>
           <div className="nl_dsf_w1">
             <Link to="#" className="n1_a1"><span className="span_a1"></span></Link>
@@ -240,7 +178,7 @@ class Comp extends Component {
             <Link to="#" className="n1_a3"><span className="span_a3"></span></Link>
           </div>
           <div className="golink">
-            <div className="link1" onClick={this.Show.bind(this)}>{this.state.show}&nbsp;\/</div>
+            <Link to="#" className="link1" onClick={this.Show.bind(this)}>{this.state.show}&nbsp;\/</Link>
             <div className={this.state.active1} >
               <Link to="#" className="a1"><i></i>&nbsp;人人网账号登录</Link>
               <Link to="#" className="a2"><i></i>&nbsp;百度账号登录</Link>
@@ -264,37 +202,36 @@ class Comp extends Component {
                     </div>
                     <div className="check">
                       <div className="check_2">
-                        <div className="chec0"><Checkbox onChange={this.onCheck} className="check_1">记住密码</Checkbox></div>
-                        <div className="chec1"><span><Link to="#">忘记密码?</Link></span></div>
+                        {/* <div className="chec0">
+                          <Checkbox onChange={this.onCheck} className="check_1">记住密码</Checkbox>
+                        </div>
+                        <div className="chec1"><span><Link href="#">忘记密码?</Link></span></div> */}
                       </div>
                       <div className="zhuce">
-                      <Popover placement="bottom" content={this.state.content1} trigger="click">
-                        <Button  className="btn_zhu" onClick={this.onLogin.bind(this)}>登录</Button>
-                      </Popover>
+                        {/* <Popover placement="bottom" content={this.state.content1} trigger="click">
+                          <Button  className="btn_zhu" onClick={this.onLogin.bind(this)}>登录</Button>
+                        </Popover> */}
                       </div>
                     </div>
-                    <p className="godeng gozhu"><Link to="/j/register">还没有账号？去注册</Link></p>
+                    <p className="godeng gozhu"><Link to="#">还没有账号？马上注册</Link></p>
                   </div>
                 </TabPane>
-
                 <TabPane tab={<span>邮箱登录</span>} key="2">
                   <div className="youxiang">
-                   <div className="you_user">
-                    <Input size="large" placeholder="请输入邮箱号" value={this.state.emailvalue} name="email" onChange={this.handlemail.bind(this)}/>
-                   </div>
-                   <div className="you_pwd">
-                    <Input size="large" type="password" placeholder="请输入密码" value={this.state.emailpwd} name="email" onChange={this.onEmailpwd.bind(this)}/>
-                   </div>
-                   <div className="check_2_1">
-                      {/* <Checkbox onChange={this.onCheck} className="check_1">我已阅读并且同意<Link to="#">美食杰用户使用协议</Link></Checkbox> */}
-                      <div className="chec0"><Checkbox onChange={this.onCheck1.bind(this)} className="check_1">记住密码</Checkbox></div>
-                        <div className="chec1"><span><Link to="#">忘记密码?</Link></span></div>
-                      </div>
+                    <div className="you_user">
+                      <Input size="large" placeholder="请输入邮箱号" value={this.state.emailvalue} name="email" onChange={this.handlemail.bind(this)}/>
+                    </div>
+                    <div className="you_pwd">
+                      <Input size="large" type="password" placeholder="请输入密码" value={this.state.emailpwd} name="email" onChange={this.onEmailpwd.bind(this)}/>
+                    </div>
+                    <div className="check_1">
+                      <Checkbox onChange={this.onCheck} className="check_1">我已阅读并且同意<Link to="#">美食杰用户使用协议</Link></Checkbox>
+                    </div>
                     <div className="zhuce_1">
                       {/* <Button  className="btn_zhu" onClick={this.onLogin_you.bind(this)}>登录</Button> */}
-                      <Popover placement="bottom" content={this.state.content2} trigger="click">
+                      <Popover placement="bottom" content={this.state.content1} trigger="click">
                         {/* <Button>Bottom</Button>  */}
-                        <Button  className="btn_zhu" onClick={this.onLogin_you.bind(this)}>登录</Button>
+                        <Button className="btn_zhu" onClick={this.onLogin_you.bind(this)}>登录</Button>
                       </Popover>
                     </div>
                   </div>

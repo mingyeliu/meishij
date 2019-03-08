@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Tabs, Input, Icon,Button,Checkbox,Popover } from 'antd'
 import '@/style/login.scss'
 import "antd/dist/antd.css"
-import store from '../store'
+import store from '@/store'
 import action from '@/store/user/action'
 
 class Comp extends Component {
@@ -226,7 +226,7 @@ class Comp extends Component {
   render () {
     const TabPane = Tabs.TabPane;
     return (
-      <div className = "content">
+      <div className = "contentLogin">
         <div className="main_w">
           <h3 className="nl_title">
             <span className="left_span"><img src="https://s1.c.meishij.net/web1/images/nl_title_left.png" alt="线" /></span>
@@ -239,7 +239,7 @@ class Comp extends Component {
             <Link to="#" className="n1_a3"><span className="span_a3"></span></Link>
           </div>
           <div className="golink">
-            <Link to="#" className="link1" onClick={this.Show.bind(this)}>{this.state.show}&nbsp;\/</Link>
+            <div className="link1" onClick={this.Show.bind(this)}>{this.state.show}&nbsp;\/</div>
             <div className={this.state.active1} >
               <Link to="#" className="a1"><i></i>&nbsp;人人网账号登录</Link>
               <Link to="#" className="a2"><i></i>&nbsp;百度账号登录</Link>
@@ -280,7 +280,7 @@ class Comp extends Component {
                       </Popover>
                       </div>
                     </div>
-                    <p className="godeng"><Link to="#">已有账号去登陆</Link></p>
+                    <p className="godeng"><Link to="/j/login">已有账号去登陆</Link></p>
                   </div>
                 </TabPane>
                 <TabPane tab={<span>邮箱注册</span>} key="2">

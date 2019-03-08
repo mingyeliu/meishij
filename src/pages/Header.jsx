@@ -13,8 +13,8 @@ class Comp extends Component {
             <input type="submit" value="搜索" className="search2" /> 
           </div>
           <div className="h-r">
-            <Link to="/other/login" className="b1">登录</Link>
-            <Link to="/other/register" className="b1">注册</Link>
+            <Link to="/j/login" className="b1">登录</Link>
+            <Link to="/j/register" className="b1">注册</Link>
             <Link to="#" className="wb">微博登录</Link>
             <Link to="#" className="qq">QQ登录</Link>    
           </div>

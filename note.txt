@@ -1,3 +1,12 @@
 @include background-gradient(to left, #a1000f, #d51314); // 自定义背景颜色渐变
 @include text-decoration($val); // none 默认 / underline 下划线 /  overline 文本上的线 /  line-through 删除线
 +
+
+http://localhost:3000/#/j/register 注册
+http://localhost:3000/#/j/login 登录
+http://localhost:3000/#/j/cart 商品详情
+http://localhost:3000/#/j/detail 做饭步骤
+http://localhost:3000/#/j/healthy 健康饮食
+http://localhost:3000/#/j/jiajuguan 家居馆
+http://localhost:3000/#/j/personal 个人中心
+http://localhost:3000/#/home 首页
