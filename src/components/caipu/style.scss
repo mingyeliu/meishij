@@ -1,0 +1,211 @@
+@import '@/qunar/reset.scss';
+
+
+// 导航
+.tabHealthy{
+  @include padding(25px 0 0);
+  
+  .el-tabs__header{
+    @include rect(100%, 52px);
+    @include background-color(#fff3e3);
+   
+    .el-tabs__item{
+      @include rect(auto, 52px);
+      @include color(#000);
+      @include line-height(52px);
+    }
+    .is-active{
+      @include color(#f73b49);
+    }
+    .el-tabs__item:hover{
+      @include color(#f73b49);
+    }
+  }
+  .el-tabs__content{
+    .el-tab-pane{
+      @include flexbox();
+      @include flex-wrap(wrap);
+      .w200{
+        @include rect(200px, auto);
+      }
+      .w570{
+        @include rect(570px, auto);
+      }
+      dl{
+        dt{
+          @include color(#272727);
+          @include line-height(44px);
+          @include font-size(24px);
+        }
+        dd{
+          display: inline-block;
+          a{
+            @include padding(6px 12px);
+            @include color(#464646);
+            @include line-height(26px);
+            @include font-size(14px);
+          }
+          a:hover{
+            @include color(#fff);
+            @include background-color(#f73b49);
+          }
+        }
+      }
+    }
+  }
+}
+
+.title{
+  @include rect(100%, 118px);
+  @include align();
+  h1{
+    @include font-size(24px);
+  }
+}
+.cont{
+  @include rect(100%, auto);
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include justify-content(space-between);
+  .el-card{
+    @include rect(233px, 332px);
+    
+    .listtyle1 {
+      background: #fff;
+      height: 332px;
+      width: 232px;
+      position: relative;
+      float: left;
+      margin-bottom: 20px;
+
+      a.big {
+        display: block;
+        height: 332px;
+        width: 232px;
+
+       .img {
+          height: 232px;
+          width: 232px;
+          display: block;
+        }
+
+        .i_w {
+          height: 100px;
+          width: 232px;
+          overflow: hidden;
+
+          .i {
+            height: 200px;
+            width: 232px;
+            transition:all .3s linear;
+
+            .c1 {
+              height: 100px;
+              width: 232px;
+              overflow: hidden;
+
+              strong {
+                display: block;
+                height: 38px;
+                line-height: 24px;
+                padding: 11px 14px 0px;
+                font-size: 14px;
+                color: #333;
+                font-weight: bold;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+              span {
+                display: block;
+                height: 26px;
+                line-height: 26px;
+                padding: 0px 14px 0px;
+                font-size: 12px;
+                color: #999;
+              }
+
+              em {
+                display: block;
+                height: 23px;
+                line-height: 23px;
+                padding: 0px 14px 0px;
+                font-size: 12px;
+                color: #ff3232;
+              }
+            }
+
+            .c2{
+              height: 100px;
+              width: 232px;
+              overflow: hidden;
+              background: #eee;
+
+              ul {
+                padding: 20px 0px 15px 14px;
+
+                li {
+                  float: left;
+                  height: 32px;
+                  width: 208px;
+                  background: url(https://s1.c.meishij.net/n/images/list_style1_icons.png) no-repeat;
+                  text-indent: 32px;
+                  line-height: 32px;
+                  color: #666;
+                  font-size: 14px;
+                }
+
+                .li1 {
+                  background-position: -9px -126px;
+                }
+                .li2 {
+                  background-position: -9px -44px;
+                }
+              }
+
+            }
+          }
+        }
+
+        .gx {
+          display: inline-block;
+          vertical-align: top;
+          height: 38px;
+          position: absolute;
+          right: -6px;
+          top: 12px;
+          background: url(https://s1.c.meishij.net/n/images/gxarrow.png) right 32px no-repeat;
+
+          span {
+            display: inline-block;
+            vertical-align: top;
+            height: 32px;
+            padding: 0px 12px;
+            background: #60a531;
+            line-height: 32px;
+            color: #fff;
+            box-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+            font-size: 14px;
+            font-family: Microsoft Yahei;
+            font-weight: 100;
+          }
+        }
+      }
+
+      a.big:hover .i_w .i{
+        transition:all .3s linear;
+        transform: translateY(-100px);
+      }
+    }
+
+    .ml0 {
+      margin-left: 0px;
+    }
+  }
+}
+
+.block{
+  @include margin(38px 0 58px 0);
+  @include align();
+}

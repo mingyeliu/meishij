@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Carousel } from 'antd'
 
 class Comp extends Component {
   constructor(props){
@@ -54,8 +53,9 @@ class Comp extends Component {
       <div className = "content">
         <div className="margin">
           <div className = "lbt">
-            {/* <Carousel autoplay>
-              <div className="swiper-slide ">
+            {/* <div className="swiper-container margin">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide ">
                   <h3>今日早餐推荐：让你爱上早起的滋味</h3>
                   <ul className="img">
                     <li><img src="https://s1.ig.meishij.net/p/20190305/5839b238a23e27fec6dabcccd928daf6.jpg" alt=""/>
@@ -81,85 +81,85 @@ class Comp extends Component {
                     </li>
                   </ul>
                 </div>
-              <div className="swiper-slide">
-                <h3>今日午餐推荐：米饭花样吃，带着味蕾去旅行</h3>
-                <ul className="img">
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/4aa79221bb44818d9a408dfb6f42ebcd.jpg" alt=""/>
+                <div className="swiper-slide">
+                  <h3>今日午餐推荐：米饭花样吃，带着味蕾去旅行</h3>
+                  <ul className="img">
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/4aa79221bb44818d9a408dfb6f42ebcd.jpg" alt=""/>
+                    <div className="c pngFix">
+                          <h2><Link to="####" >少油版鱼香茄子</Link></h2>
+                          <strong>香软入味，绝对的下饭菜</strong>
+                          <span><Link to="####">缓解疲劳</Link><em className="arrow pngFix"></em></span>
+                        </div>
+                    </li>
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/97a133864d2f9473a473e9bc23209fa0.jpg" alt=""/>
+                    <div className="c pngFix">
+                          <h2><Link to="####" >香菇虾盏</Link></h2>
+                          <strong>清淡不上火，鲜香美味</strong>
+                          <span><Link to="####">延年益寿</Link><em className="arrow pngFix"></em></span>
+                        </div>
+                    </li>
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/9ce7a8209f4446878f06d7730fa6fedf.jpg" alt=""/>
                   <div className="c pngFix">
-                        <h2><Link to="####" >少油版鱼香茄子</Link></h2>
-                        <strong>香软入味，绝对的下饭菜</strong>
-                        <span><Link to="####">缓解疲劳</Link><em className="arrow pngFix"></em></span>
+                        <h2><Link to="####" >胡萝卜炒蛋</Link></h2>
+                        <strong>简单快手，分分钟搞定</strong>
+                        <span><Link to="####">保护视力</Link><em className="arrow pngFix"></em></span>
                       </div>
                   </li>
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/97a133864d2f9473a473e9bc23209fa0.jpg" alt=""/>
+                  </ul>
+                </div>
+                <div className="swiper-slide margin">
+                  <h3>今日下午茶推荐：诱惑小吃，别让口水流下哦</h3>
+                  <ul className="img">
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/9da3aaa29771e431c0b5a5c137a22da2.jpg" alt=""/>
+                    <div className="c pngFix">
+                          <h2><Link to="####" >宝宝迷你热狗</Link></h2>
+                          <strong>口感Q弹，宝宝爱吃</strong>
+                          <span><Link to="####">补充热量</Link><em className="arrow pngFix"></em></span>
+                        </div>
+                    </li>
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/875ece0e6c7cf8fb4a7c5af26639785a.jpg" alt=""/>
+                    <div className="c pngFix">
+                          <h2><Link to="####" >大米发糕</Link></h2>
+                          <strong>又软又糯，美味挡不住</strong>
+                          <span><Link to="####">增强体质</Link><em className="arrow pngFix"></em></span>
+                        </div>
+                    </li>
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/697d8d8f6e0b7eaeeca0bd0138ac56e9.jpg" alt=""/>
                   <div className="c pngFix">
-                        <h2><Link to="####" >香菇虾盏</Link></h2>
-                        <strong>清淡不上火，鲜香美味</strong>
-                        <span><Link to="####">延年益寿</Link><em className="arrow pngFix"></em></span>
+                        <h2><Link to="####" >蜂蜜柚子茶</Link></h2>
+                        <strong>润肺化痰，清新解腻</strong>
+                        <span><Link to="####">清热去火</Link><em className="arrow pngFix"></em></span>
                       </div>
                   </li>
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/9ce7a8209f4446878f06d7730fa6fedf.jpg" alt=""/>
-                <div className="c pngFix">
-                      <h2><Link to="####" >胡萝卜炒蛋</Link></h2>
-                      <strong>简单快手，分分钟搞定</strong>
-                      <span><Link to="####">保护视力</Link><em className="arrow pngFix"></em></span>
-                    </div>
-                </li>
-                </ul>
-              </div>
-              <div className="swiper-slide">
-                <h3>今日下午茶推荐：诱惑小吃，别让口水流下哦</h3>
-                <ul className="img">
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/9da3aaa29771e431c0b5a5c137a22da2.jpg" alt=""/>
+                  </ul>
+                </div>
+                <div className="swiper-slide">
+                  <h3>今日晚餐推荐：暖心暖胃的深夜套餐奉上！</h3>
+                  <ul className="img">
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/d8ceb6273100394d27c9870bed95fc37.jpg" alt=""/>
+                    <div className="c pngFix">
+                          <h2><Link to="####" >干煸豆角</Link></h2>
+                          <strong>干香爽脆，下饭美味</strong>
+                          <span><Link to="####">利水消肿</Link><em className="arrow pngFix"></em></span>
+                        </div>
+                    </li>
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/75f7980ebd4b4683be6c607aae975eac.jpg" alt=""/>
+                    <div className="c pngFix">
+                          <h2><Link to="####" >香烤猪蹄</Link></h2>
+                          <strong>筋道有嚼劲，美味撩人</strong>
+                          <span><Link to="####">美容养颜</Link><em className="arrow pngFix"></em></span>
+                        </div>
+                    </li>
+                    <li><img src="https://s1.ig.meishij.net/p/20190305/9f0a62009c346c6614a08e13ccb86eba.jpg" alt=""/>
                   <div className="c pngFix">
-                        <h2><Link to="####" >宝宝迷你热狗</Link></h2>
-                        <strong>口感Q弹，宝宝爱吃</strong>
-                        <span><Link to="####">补充热量</Link><em className="arrow pngFix"></em></span>
+                        <h2><Link to="####" title="韭菜鸡蛋素包子">肉片炒儿菜</Link></h2>
+                        <strong>皮荤素搭配，营养美味</strong>
+                        <span><Link to="####">强身健体</Link><em className="arrow pngFix"></em></span>
                       </div>
                   </li>
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/875ece0e6c7cf8fb4a7c5af26639785a.jpg" alt=""/>
-                  <div className="c pngFix">
-                        <h2><Link to="####" >大米发糕</Link></h2>
-                        <strong>又软又糯，美味挡不住</strong>
-                        <span><Link to="####">增强体质</Link><em className="arrow pngFix"></em></span>
-                      </div>
-                  </li>
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/697d8d8f6e0b7eaeeca0bd0138ac56e9.jpg" alt=""/>
-                <div className="c pngFix">
-                      <h2><Link to="####" >蜂蜜柚子茶</Link></h2>
-                      <strong>润肺化痰，清新解腻</strong>
-                      <span><Link to="####">清热去火</Link><em className="arrow pngFix"></em></span>
-                    </div>
-                </li>
-                </ul>
-              </div>
-              <div className="swiper-slide">
-                <h3>今日晚餐推荐：暖心暖胃的深夜套餐奉上！</h3>
-                <ul className="img">
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/d8ceb6273100394d27c9870bed95fc37.jpg" alt=""/>
-                  <div className="c pngFix">
-                        <h2><Link to="####" >干煸豆角</Link></h2>
-                        <strong>干香爽脆，下饭美味</strong>
-                        <span><Link to="####">利水消肿</Link><em className="arrow pngFix"></em></span>
-                      </div>
-                  </li>
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/75f7980ebd4b4683be6c607aae975eac.jpg" alt=""/>
-                  <div className="c pngFix">
-                        <h2><Link to="####" >香烤猪蹄</Link></h2>
-                        <strong>筋道有嚼劲，美味撩人</strong>
-                        <span><Link to="####">美容养颜</Link><em className="arrow pngFix"></em></span>
-                      </div>
-                  </li>
-                  <li><img src="https://s1.ig.meishij.net/p/20190305/9f0a62009c346c6614a08e13ccb86eba.jpg" alt=""/>
-                <div className="c pngFix">
-                      <h2><Link to="####" title="韭菜鸡蛋素包子">肉片炒儿菜</Link></h2>
-                      <strong>皮荤素搭配，营养美味</strong>
-                      <span><Link to="####">强身健体</Link><em className="arrow pngFix"></em></span>
-                    </div>
-                </li>
-                </ul>
-              </div>
-              <div className="swiper-slide">
+                  </ul>
+                </div>
+                <div className="swiper-slide">
                   <h3>今日夜宵推荐：解馋美食，深夜相伴</h3>
                   <ul className="img">
                     <li><img src="https://s1.ig.meishij.net/p/20190305/f45592564147d9f5f6e1154a35faddbb.jpg" alt=""/>
@@ -185,12 +185,11 @@ class Comp extends Component {
                     </li>
                   </ul>
                 </div>
-            </Carousel>
-            
-            <div className="swiper-button-prev jt"></div>
-            <div className="swiper-button-next jt"></div>
-            <div className="swiper-pagination"></div> */}
-            
+              </div>
+              <div className="swiper-button-prev jt"></div>
+              <div className="swiper-button-next jt"></div>
+              <div className="swiper-pagination"></div>
+            </div> */}
           </div>
           
           <div className="sanyue">
@@ -257,239 +256,240 @@ class Comp extends Component {
           </div>
           
           <div className="index_pxi">
-            <Carousel autoplay>
-              <div className="swiper-slide">
-                <h3 className="bbtitles">最新菜谱</h3>
-                <div className="listtyle2_w clearfix" id="listtyle1_w">
-                  <div className="listtyle1_list clearfix" id="listtyle1_list">
-                    <div className="listtyle1 ml0">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/niurouwantaiyangmian.html" title="牛肉丸太阳面" className="big">
-                      <img className="img" alt="牛肉丸太阳面" src="https://s1.st.meishij.net/r/65/51/13262815/a13262815_155094096501538.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>牛肉丸太阳面</strong><span>3 评论  433 人气</span><em>超级幸运辣</em></div>
-                      <div className="c2"><ul><li className="li1">11步 / 大概30分钟</li><li className="li2">煮 / 咸鲜味</li></ul></div></div></div>
-                      <strong className="gx"><span>强身健体</span></strong></Link>
+            <div className="swiper-container">
+              <div className="swiper-wrapper">
+                <div className="swiper-slide">
+                  <h3 className="bbtitles">最新菜谱</h3>
+                  <div className="listtyle2_w clearfix" id="listtyle1_w">
+                    <div className="listtyle1_list clearfix" id="listtyle1_list">
+                      <div className="listtyle1 ml0">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/niurouwantaiyangmian.html" title="牛肉丸太阳面" className="big">
+                        <img className="img" alt="牛肉丸太阳面" src="https://s1.st.meishij.net/r/65/51/13262815/a13262815_155094096501538.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>牛肉丸太阳面</strong><span>3 评论  433 人气</span><em>超级幸运辣</em></div>
+                        <div className="c2"><ul><li className="li1">11步 / 大概30分钟</li><li className="li2">煮 / 咸鲜味</li></ul></div></div></div>
+                        <strong className="gx"><span>强身健体</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/zaoniyikousu_3.html" title="枣泥一口酥" className="big">
+                        <img className="img" alt="枣泥一口酥" src="https://s1.st.meishij.net/r/93/209/2677343/a2677343_155093239143341.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>枣泥一口酥</strong><span>1 评论  376 人气</span><em>米汀Waiting</em></div>
+                        <div className="c2"><ul><li className="li1">10步 / 大概30分钟</li><li className="li2">烘焙 / 甜味</li></ul></div></div></div>
+                        <strong className="gx"><span>促发育</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/chunshougongzhuroufu.html" title="纯手工猪肉脯" className="big">
+                        <img className="img" alt="纯手工猪肉脯" src="https://s1.st.meishij.net/r/173/28/13569673/a13569673_155090421165577.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>纯手工猪肉脯</strong><span>1 评论  424 人气</span><em>杰米13569673</em></div>
+                        <div className="c2"><ul><li className="li1">5步 / 大概30分钟</li><li className="li2">烤 / 甜味</li></ul></div></div></div>
+                        </Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/nongjiaxiaochaorou_59.html" title="农家小炒肉" className="big">
+                        <img className="img" alt="农家小炒肉" src="https://s1.st.meishij.net/r/09/29/13132259/a13132259_155088726506357.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>农家小炒肉</strong><span>19 评论  297 人气</span><em>造食日记</em></div>
+                        <div className="c2"><ul><li className="li1">4步 / 大概5分钟</li><li className="li2">炒 / 香辣味</li></ul></div></div></div>
+                        </Link>
+                      </div>
+                      <div className="listtyle1 ml0">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/nanguayinerlu_4.html" title="南瓜银耳露" className="big">
+                        <img className="img" alt="南瓜银耳露" src="https://s1.st.meishij.net/r/146/168/3542146/a3542146_155084832282071.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>南瓜银耳露</strong><span>0 评论  480 人气</span><em>soshaw</em></div>
+                        <div className="c2"><ul><li className="li1">6步 / 大概30分钟</li><li className="li2">煮 / 甜味</li></ul></div></div></div>
+                        <strong className="gx"><span>防癌</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/jiachanghongshaopaigu_4.html" title="家常红烧排骨" className="big">
+                        <img className="img" alt="家常红烧排骨" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080067677406.jpg" />
+                        <div className="i_w">
+                        <div className="i" >
+                        <div className="c1"><strong>家常红烧排骨</strong><span>0 评论  479 人气</span><em>石榴树2008</em></div>
+                        <div className="c2"><ul><li className="li1">8步 / 大概数小时</li><li className="li2">烧 / 家常味</li></ul></div></div></div>
+                        <strong className="gx"><span>补肾</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/yuntunmian_22.html" title="云吞面" className="big">
+                        <img className="img" alt="云吞面" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080680668426.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>云吞面</strong><span>0 评论  484 人气</span><em>石榴树2008</em></div>
+                        <div className="c2"><ul><li className="li1">11步 / 大概90分钟</li><li className="li2">煮 / 家常味</li></ul></div></div></div>
+                        <strong className="gx"><span>抵抗力</span></strong></Link>
+                      </div>
+                      <div className="listtyle1 ">
+                      <div className="index_cplist_more">
+                        <h3>热门栏目推荐</h3>
+                        <ul><li><Link to="/chufang/diy/">最新菜谱</Link></li><li><Link to="/chufang/diy/jiangchangcaipu/">家常菜</Link></li><li><Link to="/chufang/diy/langcaipu/">凉菜</Link></li><li><Link to="/chufang/diy/sushi/">素食</Link></li><li><Link to="/chufang/diy/zaocan/">早餐</Link></li><li><Link to="/yaoshanshiliao/gongnengxing/wufa/">乌发</Link></li><li><Link to="/yaoshanshiliao/jibingtiaoli/gaoxueya/">高血压</Link></li><li><Link to="/hongpei/">烘焙</Link></li><li><Link to="/chufang/diy/guowaicaipu1/hanguo/">韩国料理</Link></li><li><Link to="/china-food/caixi/chuancai/">川菜</Link></li><li><Link to="/china-food/caixi/yuecai/">粤菜</Link></li><li><Link to="/china-food/caixi/xiangcai/">湘菜</Link></li><li><Link to="/chufang/diy/tianpindianxin/">甜点</Link></li><li><Link to="/chufang/diy/" className="hot">进入菜谱大全 &gt;&gt;</Link></li></ul>
+                      </div>
                     </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/zaoniyikousu_3.html" title="枣泥一口酥" className="big">
-                      <img className="img" alt="枣泥一口酥" src="https://s1.st.meishij.net/r/93/209/2677343/a2677343_155093239143341.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>枣泥一口酥</strong><span>1 评论  376 人气</span><em>米汀Waiting</em></div>
-                      <div className="c2"><ul><li className="li1">10步 / 大概30分钟</li><li className="li2">烘焙 / 甜味</li></ul></div></div></div>
-                      <strong className="gx"><span>促发育</span></strong></Link>
                     </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/chunshougongzhuroufu.html" title="纯手工猪肉脯" className="big">
-                      <img className="img" alt="纯手工猪肉脯" src="https://s1.st.meishij.net/r/173/28/13569673/a13569673_155090421165577.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>纯手工猪肉脯</strong><span>1 评论  424 人气</span><em>杰米13569673</em></div>
-                      <div className="c2"><ul><li className="li1">5步 / 大概30分钟</li><li className="li2">烤 / 甜味</li></ul></div></div></div>
-                      </Link>
-                    </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/nongjiaxiaochaorou_59.html" title="农家小炒肉" className="big">
-                      <img className="img" alt="农家小炒肉" src="https://s1.st.meishij.net/r/09/29/13132259/a13132259_155088726506357.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>农家小炒肉</strong><span>19 评论  297 人气</span><em>造食日记</em></div>
-                      <div className="c2"><ul><li className="li1">4步 / 大概5分钟</li><li className="li2">炒 / 香辣味</li></ul></div></div></div>
-                      </Link>
-                    </div>
-                    <div className="listtyle1 ml0">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/nanguayinerlu_4.html" title="南瓜银耳露" className="big">
-                      <img className="img" alt="南瓜银耳露" src="https://s1.st.meishij.net/r/146/168/3542146/a3542146_155084832282071.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>南瓜银耳露</strong><span>0 评论  480 人气</span><em>soshaw</em></div>
-                      <div className="c2"><ul><li className="li1">6步 / 大概30分钟</li><li className="li2">煮 / 甜味</li></ul></div></div></div>
-                      <strong className="gx"><span>防癌</span></strong></Link>
-                    </div>
-                    <div className="listtyle1">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/jiachanghongshaopaigu_4.html" title="家常红烧排骨" className="big">
-                      <img className="img" alt="家常红烧排骨" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080067677406.jpg" />
-                      <div className="i_w">
-                      <div className="i" >
-                      <div className="c1"><strong>家常红烧排骨</strong><span>0 评论  479 人气</span><em>石榴树2008</em></div>
-                      <div className="c2"><ul><li className="li1">8步 / 大概数小时</li><li className="li2">烧 / 家常味</li></ul></div></div></div>
-                      <strong className="gx"><span>补肾</span></strong></Link>
-                    </div>
-                    <div className="listtyle1">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/yuntunmian_22.html" title="云吞面" className="big">
-                      <img className="img" alt="云吞面" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080680668426.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>云吞面</strong><span>0 评论  484 人气</span><em>石榴树2008</em></div>
-                      <div className="c2"><ul><li className="li1">11步 / 大概90分钟</li><li className="li2">煮 / 家常味</li></ul></div></div></div>
-                      <strong className="gx"><span>抵抗力</span></strong></Link>
-                    </div>
-                    <div className="listtyle1 ">
-                    <div className="index_cplist_more">
-                      <h3>热门栏目推荐</h3>
-                      <ul><li><Link to="/chufang/diy/">最新菜谱</Link></li><li><Link to="/chufang/diy/jiangchangcaipu/">家常菜</Link></li><li><Link to="/chufang/diy/langcaipu/">凉菜</Link></li><li><Link to="/chufang/diy/sushi/">素食</Link></li><li><Link to="/chufang/diy/zaocan/">早餐</Link></li><li><Link to="/yaoshanshiliao/gongnengxing/wufa/">乌发</Link></li><li><Link to="/yaoshanshiliao/jibingtiaoli/gaoxueya/">高血压</Link></li><li><Link to="/hongpei/">烘焙</Link></li><li><Link to="/chufang/diy/guowaicaipu1/hanguo/">韩国料理</Link></li><li><Link to="/china-food/caixi/chuancai/">川菜</Link></li><li><Link to="/china-food/caixi/yuecai/">粤菜</Link></li><li><Link to="/china-food/caixi/xiangcai/">湘菜</Link></li><li><Link to="/chufang/diy/tianpindianxin/">甜点</Link></li><li><Link to="/chufang/diy/" className="hot">进入菜谱大全 &gt;&gt;</Link></li></ul>
-                    </div>
-                  </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="swiper-slide">
-                <h3 className="bbtitles">每小时最热菜谱</h3>
-                <div className="listtyle2_w clearfix" id="listtyle1_w">
-                  <div className="listtyle1_list clearfix" id="listtyle1_list">
-                    <div className="listtyle1 ml0">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/niurouwantaiyangmian.html" title="牛肉丸太阳面" className="big">
-                      <img className="img" alt="牛肉丸太阳面" src="https://s1.st.meishij.net/r/65/51/13262815/a13262815_155094096501538.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>牛肉丸太阳面</strong><span>3 评论  433 人气</span><em>超级幸运辣</em></div>
-                      <div className="c2"><ul><li className="li1">11步 / 大概30分钟</li><li className="li2">煮 / 咸鲜味</li></ul></div></div></div>
-                      <strong className="gx"><span>强身健体</span></strong></Link>
+                <div className="swiper-slide">
+                  <h3 className="bbtitles">每小时最热菜谱</h3>
+                  <div className="listtyle2_w clearfix" id="listtyle1_w">
+                    <div className="listtyle1_list clearfix" id="listtyle1_list">
+                      <div className="listtyle1 ml0">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/niurouwantaiyangmian.html" title="牛肉丸太阳面" className="big">
+                        <img className="img" alt="牛肉丸太阳面" src="https://s1.st.meishij.net/r/65/51/13262815/a13262815_155094096501538.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>牛肉丸太阳面</strong><span>3 评论  433 人气</span><em>超级幸运辣</em></div>
+                        <div className="c2"><ul><li className="li1">11步 / 大概30分钟</li><li className="li2">煮 / 咸鲜味</li></ul></div></div></div>
+                        <strong className="gx"><span>强身健体</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/zaoniyikousu_3.html" title="枣泥一口酥" className="big">
+                        <img className="img" alt="枣泥一口酥" src="https://s1.st.meishij.net/r/93/209/2677343/a2677343_155093239143341.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>枣泥一口酥</strong><span>1 评论  376 人气</span><em>米汀Waiting</em></div>
+                        <div className="c2"><ul><li className="li1">10步 / 大概30分钟</li><li className="li2">烘焙 / 甜味</li></ul></div></div></div>
+                        <strong className="gx"><span>促发育</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/chunshougongzhuroufu.html" title="纯手工猪肉脯" className="big">
+                        <img className="img" alt="纯手工猪肉脯" src="https://s1.st.meishij.net/r/173/28/13569673/a13569673_155090421165577.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>纯手工猪肉脯</strong><span>1 评论  424 人气</span><em>杰米13569673</em></div>
+                        <div className="c2"><ul><li className="li1">5步 / 大概30分钟</li><li className="li2">烤 / 甜味</li></ul></div></div></div>
+                        </Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/nongjiaxiaochaorou_59.html" title="农家小炒肉" className="big">
+                        <img className="img" alt="农家小炒肉" src="https://s1.st.meishij.net/r/09/29/13132259/a13132259_155088726506357.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>农家小炒肉</strong><span>19 评论  297 人气</span><em>造食日记</em></div>
+                        <div className="c2"><ul><li className="li1">4步 / 大概5分钟</li><li className="li2">炒 / 香辣味</li></ul></div></div></div>
+                        </Link>
+                      </div>
+                      <div className="listtyle1 ml0">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/nanguayinerlu_4.html" title="南瓜银耳露" className="big">
+                        <img className="img" alt="南瓜银耳露" src="https://s1.st.meishij.net/r/146/168/3542146/a3542146_155084832282071.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>南瓜银耳露</strong><span>0 评论  480 人气</span><em>soshaw</em></div>
+                        <div className="c2"><ul><li className="li1">6步 / 大概30分钟</li><li className="li2">煮 / 甜味</li></ul></div></div></div>
+                        <strong className="gx"><span>防癌</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/jiachanghongshaopaigu_4.html" title="家常红烧排骨" className="big">
+                        <img className="img" alt="家常红烧排骨" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080067677406.jpg" />
+                        <div className="i_w">
+                        <div className="i" >
+                        <div className="c1"><strong>家常红烧排骨</strong><span>0 评论  479 人气</span><em>石榴树2008</em></div>
+                        <div className="c2"><ul><li className="li1">8步 / 大概数小时</li><li className="li2">烧 / 家常味</li></ul></div></div></div>
+                        <strong className="gx"><span>补肾</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/yuntunmian_22.html" title="云吞面" className="big">
+                        <img className="img" alt="云吞面" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080680668426.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>云吞面</strong><span>0 评论  484 人气</span><em>石榴树2008</em></div>
+                        <div className="c2"><ul><li className="li1">11步 / 大概90分钟</li><li className="li2">煮 / 家常味</li></ul></div></div></div>
+                        <strong className="gx"><span>抵抗力</span></strong></Link>
+                      </div>
+                      <div className="listtyle1 ">
+                      <div className="index_cplist_more">
+                        <h3>热门栏目推荐</h3>
+                        <ul><li><Link to="/chufang/diy/">最新菜谱</Link></li><li><Link to="/chufang/diy/jiangchangcaipu/">家常菜</Link></li><li><Link to="/chufang/diy/langcaipu/">凉菜</Link></li><li><Link to="/chufang/diy/sushi/">素食</Link></li><li><Link to="/chufang/diy/zaocan/">早餐</Link></li><li><Link to="/yaoshanshiliao/gongnengxing/wufa/">乌发</Link></li><li><Link to="/yaoshanshiliao/jibingtiaoli/gaoxueya/">高血压</Link></li><li><Link to="/hongpei/">烘焙</Link></li><li><Link to="/chufang/diy/guowaicaipu1/hanguo/">韩国料理</Link></li><li><Link to="/china-food/caixi/chuancai/">川菜</Link></li><li><Link to="/china-food/caixi/yuecai/">粤菜</Link></li><li><Link to="/china-food/caixi/xiangcai/">湘菜</Link></li><li><Link to="/chufang/diy/tianpindianxin/">甜点</Link></li><li><Link to="/chufang/diy/" className="hot">进入菜谱大全 &gt;&gt;</Link></li></ul>
+                      </div>
                     </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/zaoniyikousu_3.html" title="枣泥一口酥" className="big">
-                      <img className="img" alt="枣泥一口酥" src="https://s1.st.meishij.net/r/93/209/2677343/a2677343_155093239143341.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>枣泥一口酥</strong><span>1 评论  376 人气</span><em>米汀Waiting</em></div>
-                      <div className="c2"><ul><li className="li1">10步 / 大概30分钟</li><li className="li2">烘焙 / 甜味</li></ul></div></div></div>
-                      <strong className="gx"><span>促发育</span></strong></Link>
                     </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/chunshougongzhuroufu.html" title="纯手工猪肉脯" className="big">
-                      <img className="img" alt="纯手工猪肉脯" src="https://s1.st.meishij.net/r/173/28/13569673/a13569673_155090421165577.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>纯手工猪肉脯</strong><span>1 评论  424 人气</span><em>杰米13569673</em></div>
-                      <div className="c2"><ul><li className="li1">5步 / 大概30分钟</li><li className="li2">烤 / 甜味</li></ul></div></div></div>
-                      </Link>
-                    </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/nongjiaxiaochaorou_59.html" title="农家小炒肉" className="big">
-                      <img className="img" alt="农家小炒肉" src="https://s1.st.meishij.net/r/09/29/13132259/a13132259_155088726506357.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>农家小炒肉</strong><span>19 评论  297 人气</span><em>造食日记</em></div>
-                      <div className="c2"><ul><li className="li1">4步 / 大概5分钟</li><li className="li2">炒 / 香辣味</li></ul></div></div></div>
-                      </Link>
-                    </div>
-                    <div className="listtyle1 ml0">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/nanguayinerlu_4.html" title="南瓜银耳露" className="big">
-                      <img className="img" alt="南瓜银耳露" src="https://s1.st.meishij.net/r/146/168/3542146/a3542146_155084832282071.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>南瓜银耳露</strong><span>0 评论  480 人气</span><em>soshaw</em></div>
-                      <div className="c2"><ul><li className="li1">6步 / 大概30分钟</li><li className="li2">煮 / 甜味</li></ul></div></div></div>
-                      <strong className="gx"><span>防癌</span></strong></Link>
-                    </div>
-                    <div className="listtyle1">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/jiachanghongshaopaigu_4.html" title="家常红烧排骨" className="big">
-                      <img className="img" alt="家常红烧排骨" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080067677406.jpg" />
-                      <div className="i_w">
-                      <div className="i" >
-                      <div className="c1"><strong>家常红烧排骨</strong><span>0 评论  479 人气</span><em>石榴树2008</em></div>
-                      <div className="c2"><ul><li className="li1">8步 / 大概数小时</li><li className="li2">烧 / 家常味</li></ul></div></div></div>
-                      <strong className="gx"><span>补肾</span></strong></Link>
-                    </div>
-                    <div className="listtyle1">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/yuntunmian_22.html" title="云吞面" className="big">
-                      <img className="img" alt="云吞面" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080680668426.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>云吞面</strong><span>0 评论  484 人气</span><em>石榴树2008</em></div>
-                      <div className="c2"><ul><li className="li1">11步 / 大概90分钟</li><li className="li2">煮 / 家常味</li></ul></div></div></div>
-                      <strong className="gx"><span>抵抗力</span></strong></Link>
-                    </div>
-                    <div className="listtyle1 ">
-                    <div className="index_cplist_more">
-                      <h3>热门栏目推荐</h3>
-                      <ul><li><Link to="/chufang/diy/">最新菜谱</Link></li><li><Link to="/chufang/diy/jiangchangcaipu/">家常菜</Link></li><li><Link to="/chufang/diy/langcaipu/">凉菜</Link></li><li><Link to="/chufang/diy/sushi/">素食</Link></li><li><Link to="/chufang/diy/zaocan/">早餐</Link></li><li><Link to="/yaoshanshiliao/gongnengxing/wufa/">乌发</Link></li><li><Link to="/yaoshanshiliao/jibingtiaoli/gaoxueya/">高血压</Link></li><li><Link to="/hongpei/">烘焙</Link></li><li><Link to="/chufang/diy/guowaicaipu1/hanguo/">韩国料理</Link></li><li><Link to="/china-food/caixi/chuancai/">川菜</Link></li><li><Link to="/china-food/caixi/yuecai/">粤菜</Link></li><li><Link to="/china-food/caixi/xiangcai/">湘菜</Link></li><li><Link to="/chufang/diy/tianpindianxin/">甜点</Link></li><li><Link to="/chufang/diy/" className="hot">进入菜谱大全 &gt;&gt;</Link></li></ul>
-                    </div>
-                  </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="swiper-slide">
-                <h3 className="bbtitles">今日最受欢迎菜谱</h3>
-                <div className="listtyle2_w clearfix" id="listtyle1_w">
-                  <div className="listtyle1_list clearfix" id="listtyle1_list">
-                    <div className="listtyle1 ml0">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/niurouwantaiyangmian.html" title="牛肉丸太阳面" className="big">
-                      <img className="img" alt="牛肉丸太阳面" src="https://s1.st.meishij.net/r/65/51/13262815/a13262815_155094096501538.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>牛肉丸太阳面</strong><span>3 评论  433 人气</span><em>超级幸运辣</em></div>
-                      <div className="c2"><ul><li className="li1">11步 / 大概30分钟</li><li className="li2">煮 / 咸鲜味</li></ul></div></div></div>
-                      <strong className="gx"><span>强身健体</span></strong></Link>
+                <div className="swiper-slide">
+                  <h3 className="bbtitles">今日最受欢迎菜谱</h3>
+                  <div className="listtyle2_w clearfix" id="listtyle1_w">
+                    <div className="listtyle1_list clearfix" id="listtyle1_list">
+                      <div className="listtyle1 ml0">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/niurouwantaiyangmian.html" title="牛肉丸太阳面" className="big">
+                        <img className="img" alt="牛肉丸太阳面" src="https://s1.st.meishij.net/r/65/51/13262815/a13262815_155094096501538.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>牛肉丸太阳面</strong><span>3 评论  433 人气</span><em>超级幸运辣</em></div>
+                        <div className="c2"><ul><li className="li1">11步 / 大概30分钟</li><li className="li2">煮 / 咸鲜味</li></ul></div></div></div>
+                        <strong className="gx"><span>强身健体</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/zaoniyikousu_3.html" title="枣泥一口酥" className="big">
+                        <img className="img" alt="枣泥一口酥" src="https://s1.st.meishij.net/r/93/209/2677343/a2677343_155093239143341.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>枣泥一口酥</strong><span>1 评论  376 人气</span><em>米汀Waiting</em></div>
+                        <div className="c2"><ul><li className="li1">10步 / 大概30分钟</li><li className="li2">烘焙 / 甜味</li></ul></div></div></div>
+                        <strong className="gx"><span>促发育</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/chunshougongzhuroufu.html" title="纯手工猪肉脯" className="big">
+                        <img className="img" alt="纯手工猪肉脯" src="https://s1.st.meishij.net/r/173/28/13569673/a13569673_155090421165577.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>纯手工猪肉脯</strong><span>1 评论  424 人气</span><em>杰米13569673</em></div>
+                        <div className="c2"><ul><li className="li1">5步 / 大概30分钟</li><li className="li2">烤 / 甜味</li></ul></div></div></div>
+                        </Link>
+                      </div>
+                      <div className="listtyle1">
+                        <Link target="_blank" to="https://www.meishij.net/zuofa/nongjiaxiaochaorou_59.html" title="农家小炒肉" className="big">
+                        <img className="img" alt="农家小炒肉" src="https://s1.st.meishij.net/r/09/29/13132259/a13132259_155088726506357.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>农家小炒肉</strong><span>19 评论  297 人气</span><em>造食日记</em></div>
+                        <div className="c2"><ul><li className="li1">4步 / 大概5分钟</li><li className="li2">炒 / 香辣味</li></ul></div></div></div>
+                        </Link>
+                      </div>
+                      <div className="listtyle1 ml0">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/nanguayinerlu_4.html" title="南瓜银耳露" className="big">
+                        <img className="img" alt="南瓜银耳露" src="https://s1.st.meishij.net/r/146/168/3542146/a3542146_155084832282071.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>南瓜银耳露</strong><span>0 评论  480 人气</span><em>soshaw</em></div>
+                        <div className="c2"><ul><li className="li1">6步 / 大概30分钟</li><li className="li2">煮 / 甜味</li></ul></div></div></div>
+                        <strong className="gx"><span>防癌</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/jiachanghongshaopaigu_4.html" title="家常红烧排骨" className="big">
+                        <img className="img" alt="家常红烧排骨" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080067677406.jpg" />
+                        <div className="i_w">
+                        <div className="i" >
+                        <div className="c1"><strong>家常红烧排骨</strong><span>0 评论  479 人气</span><em>石榴树2008</em></div>
+                        <div className="c2"><ul><li className="li1">8步 / 大概数小时</li><li className="li2">烧 / 家常味</li></ul></div></div></div>
+                        <strong className="gx"><span>补肾</span></strong></Link>
+                      </div>
+                      <div className="listtyle1">
+                      <Link target="_blank" to="https://www.meishij.net/zuofa/yuntunmian_22.html" title="云吞面" className="big">
+                        <img className="img" alt="云吞面" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080680668426.jpg" />
+                        <div className="i_w">
+                        <div className="i">
+                        <div className="c1"><strong>云吞面</strong><span>0 评论  484 人气</span><em>石榴树2008</em></div>
+                        <div className="c2"><ul><li className="li1">11步 / 大概90分钟</li><li className="li2">煮 / 家常味</li></ul></div></div></div>
+                        <strong className="gx"><span>抵抗力</span></strong></Link>
+                      </div>
+                      <div className="listtyle1 ">
+                      <div className="index_cplist_more">
+                        <h3>热门栏目推荐</h3>
+                        <ul><li><Link to="/chufang/diy/">最新菜谱</Link></li><li><Link to="/chufang/diy/jiangchangcaipu/">家常菜</Link></li><li><Link to="/chufang/diy/langcaipu/">凉菜</Link></li><li><Link to="/chufang/diy/sushi/">素食</Link></li><li><Link to="/chufang/diy/zaocan/">早餐</Link></li><li><Link to="/yaoshanshiliao/gongnengxing/wufa/">乌发</Link></li><li><Link to="/yaoshanshiliao/jibingtiaoli/gaoxueya/">高血压</Link></li><li><Link to="/hongpei/">烘焙</Link></li><li><Link to="/chufang/diy/guowaicaipu1/hanguo/">韩国料理</Link></li><li><Link to="/china-food/caixi/chuancai/">川菜</Link></li><li><Link to="/china-food/caixi/yuecai/">粤菜</Link></li><li><Link to="/china-food/caixi/xiangcai/">湘菜</Link></li><li><Link to="/chufang/diy/tianpindianxin/">甜点</Link></li><li><Link to="/chufang/diy/" className="hot">进入菜谱大全 &gt;&gt;</Link></li></ul>
+                      </div>
                     </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/zaoniyikousu_3.html" title="枣泥一口酥" className="big">
-                      <img className="img" alt="枣泥一口酥" src="https://s1.st.meishij.net/r/93/209/2677343/a2677343_155093239143341.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>枣泥一口酥</strong><span>1 评论  376 人气</span><em>米汀Waiting</em></div>
-                      <div className="c2"><ul><li className="li1">10步 / 大概30分钟</li><li className="li2">烘焙 / 甜味</li></ul></div></div></div>
-                      <strong className="gx"><span>促发育</span></strong></Link>
                     </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/chunshougongzhuroufu.html" title="纯手工猪肉脯" className="big">
-                      <img className="img" alt="纯手工猪肉脯" src="https://s1.st.meishij.net/r/173/28/13569673/a13569673_155090421165577.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>纯手工猪肉脯</strong><span>1 评论  424 人气</span><em>杰米13569673</em></div>
-                      <div className="c2"><ul><li className="li1">5步 / 大概30分钟</li><li className="li2">烤 / 甜味</li></ul></div></div></div>
-                      </Link>
-                    </div>
-                    <div className="listtyle1">
-                      <Link target="_blank" to="https://www.meishij.net/zuofa/nongjiaxiaochaorou_59.html" title="农家小炒肉" className="big">
-                      <img className="img" alt="农家小炒肉" src="https://s1.st.meishij.net/r/09/29/13132259/a13132259_155088726506357.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>农家小炒肉</strong><span>19 评论  297 人气</span><em>造食日记</em></div>
-                      <div className="c2"><ul><li className="li1">4步 / 大概5分钟</li><li className="li2">炒 / 香辣味</li></ul></div></div></div>
-                      </Link>
-                    </div>
-                    <div className="listtyle1 ml0">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/nanguayinerlu_4.html" title="南瓜银耳露" className="big">
-                      <img className="img" alt="南瓜银耳露" src="https://s1.st.meishij.net/r/146/168/3542146/a3542146_155084832282071.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>南瓜银耳露</strong><span>0 评论  480 人气</span><em>soshaw</em></div>
-                      <div className="c2"><ul><li className="li1">6步 / 大概30分钟</li><li className="li2">煮 / 甜味</li></ul></div></div></div>
-                      <strong className="gx"><span>防癌</span></strong></Link>
-                    </div>
-                    <div className="listtyle1">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/jiachanghongshaopaigu_4.html" title="家常红烧排骨" className="big">
-                      <img className="img" alt="家常红烧排骨" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080067677406.jpg" />
-                      <div className="i_w">
-                      <div className="i" >
-                      <div className="c1"><strong>家常红烧排骨</strong><span>0 评论  479 人气</span><em>石榴树2008</em></div>
-                      <div className="c2"><ul><li className="li1">8步 / 大概数小时</li><li className="li2">烧 / 家常味</li></ul></div></div></div>
-                      <strong className="gx"><span>补肾</span></strong></Link>
-                    </div>
-                    <div className="listtyle1">
-                    <Link target="_blank" to="https://www.meishij.net/zuofa/yuntunmian_22.html" title="云吞面" className="big">
-                      <img className="img" alt="云吞面" src="https://s1.st.meishij.net/r/143/54/3701143/a3701143_155080680668426.jpg" />
-                      <div className="i_w">
-                      <div className="i">
-                      <div className="c1"><strong>云吞面</strong><span>0 评论  484 人气</span><em>石榴树2008</em></div>
-                      <div className="c2"><ul><li className="li1">11步 / 大概90分钟</li><li className="li2">煮 / 家常味</li></ul></div></div></div>
-                      <strong className="gx"><span>抵抗力</span></strong></Link>
-                    </div>
-                    <div className="listtyle1 ">
-                    <div className="index_cplist_more">
-                      <h3>热门栏目推荐</h3>
-                      <ul><li><Link to="/chufang/diy/">最新菜谱</Link></li><li><Link to="/chufang/diy/jiangchangcaipu/">家常菜</Link></li><li><Link to="/chufang/diy/langcaipu/">凉菜</Link></li><li><Link to="/chufang/diy/sushi/">素食</Link></li><li><Link to="/chufang/diy/zaocan/">早餐</Link></li><li><Link to="/yaoshanshiliao/gongnengxing/wufa/">乌发</Link></li><li><Link to="/yaoshanshiliao/jibingtiaoli/gaoxueya/">高血压</Link></li><li><Link to="/hongpei/">烘焙</Link></li><li><Link to="/chufang/diy/guowaicaipu1/hanguo/">韩国料理</Link></li><li><Link to="/china-food/caixi/chuancai/">川菜</Link></li><li><Link to="/china-food/caixi/yuecai/">粤菜</Link></li><li><Link to="/china-food/caixi/xiangcai/">湘菜</Link></li><li><Link to="/chufang/diy/tianpindianxin/">甜点</Link></li><li><Link to="/chufang/diy/" className="hot">进入菜谱大全 &gt;&gt;</Link></li></ul>
-                    </div>
-                  </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="swiper-slide">
+                <div className="swiper-slide">
                   <h3 className="bbtitles">一周最新欢迎菜谱</h3>
                   <div className="listtyle2_w clearfix" id="listtyle1_w">
                     <div className="listtyle1_list clearfix" id="listtyle1_list">
@@ -565,7 +565,8 @@ class Comp extends Component {
                     </div>
                   </div>
                 </div>
-            </Carousel>
+              </div>
+            </div>
           </div>
           
           <h3 className="bbtitles">健康新闻<span className="paixu"><Link target="_blank" to="https://www.meishij.net/jiankang/">更多健康资讯 &gt;</Link></span></h3>

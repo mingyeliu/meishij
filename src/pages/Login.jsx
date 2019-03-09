@@ -154,6 +154,7 @@ class Comp extends Component {
       console.log(data.data[0]);
       if(login.username === this.state.uservalue && this.state.password === login.password){
         console.log("登录成功")
+        this.props.history.push('/j/caipu')
         if(!this.state.check01 === true){
           console.log(this.state.check01)
           localStorage.setItem('isLogin',this.state.uservalue);
@@ -202,6 +203,7 @@ class Comp extends Component {
       var login = data.data[0]
       console.log(data.data[0])
       if(login.username === this.state.emailvalue && login.password === this.state.emailpwd){
+        this.props.history.push('/j/caipu')
         if(this.state.check02 !== true) {
           localStorage.setItem('isLogin_you',this.state.emailvalue);
           localStorage.setItem('pwd1',this.state.emailpwd);

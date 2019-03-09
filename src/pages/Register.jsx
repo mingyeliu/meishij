@@ -176,8 +176,9 @@ class Comp extends Component {
     })
   }
   onZhuce_you(){
-    var msg = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
-
+    // var msg = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+    var msg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/g;
+    
     if(this.state.check02 === true) {
       if(!msg.test(this.state.emailvalue)){
         this.setState({

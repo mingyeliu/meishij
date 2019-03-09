@@ -7,6 +7,8 @@ import '@/style/personal.scss'
 import '@/style/index.scss'
 import '@/style/homedetail.scss'
 import HealthyDiet from '@/pages/HealthyDiet'
+import Caipu from '@/pages/Caipu'
+
 import Cart from '@/pages/Cart'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
@@ -20,9 +22,10 @@ class OtherApp extends Component {
         <Header />
         <Nav />
         <Switch>
+          <Route path="/j/caipu/:type" component = { Caipu } />
           <Route path="/j/detail" component = { Detail } />
           <Route path="/j/healthy" component = { HealthyDiet } />
-          <Route path="/j/cart" component = { Cart } />
+          <Route path="/j/cart/:id" component = { Cart } />
           <Route path="/j/jiajuguan" component = { Jiajuguan } />
           <Route path="/j/login" component = { Login } />
           <Route path="/j/register" component = { Register } />

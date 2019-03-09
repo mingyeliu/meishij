@@ -10,8 +10,8 @@ class Comp extends Component {
       <nav className="nav">
         <div className="margin">
           <ul>
-            <li><Link to="#" className="a1">首页</Link></li>
-            <li className="te1 te2 te3"><Link to="#" className="a1">菜谱大全</Link>
+            <li><Link to="/" className="a1">首页</Link></li>
+            <li className="te1 te2 te3"><Link to="/j/caipu" className="a1">菜谱大全</Link>
             <div className="dw clearfix te5">
               <div className="dww clearfix dww_cpdq">
                 <div className="dwitem clearfix pngFix">
@@ -92,7 +92,7 @@ class Comp extends Component {
               </div>
             </div>
             </li>
-            <li className="te1 te2 te4"><Link to="#" className="a1">饮食健康</Link>
+            <li className="te1 te2 te4"><Link to="/j/healthy" className="a1">饮食健康</Link>
             <div className="dw clearfix te6">
               <div className="dww clearfix dww_ysjk">
                 <div className="dwitem clearfix pngFix">
@@ -165,7 +165,7 @@ class Comp extends Component {
             </div>
             </li>
             <li><Link to="#" className="a1">美食菜单</Link></li>
-            <li><Link to="#" className="a1">家居馆</Link></li>
+            <li><Link to="/j/jiajuguan" className="a1">家居馆</Link></li>
             <li><Link to="#" className="a1"><img src="https://s1.st.meishij.net/p2/20160909/20160909164810_443.png" alt=""/>美食达人</Link></li>
             <li><Link to="#" className="a1">菜谱视频</Link></li>
             <li><Link to="#" className="a1">产品下载</Link></li>

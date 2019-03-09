@@ -22,14 +22,38 @@
     }
     .cont-c{
       @include rect(530px, 210px);
-      @include margin(0 0 0 20px);
+      @include margin(15px 0 0 20px);
       .neck{
+        @include rect(530px, 42px);
+        @include flexbox();
+        @include justify-content(space-between);
         span{
           @include font-size(22px);
+          @include line-height(42px);
+          @include color(#212121);
+        }
+        .myletter{
+          @include rect(72px, 30px);
+          @include font-size(14px);
+          @include background-color(#ededed);
+          border: none;
+        }
+        .myletter:hover{
+          @include background-color(#ccc);
         }
       }
-      .total .adit{
-        @include font-size(12px);
+      .adit{
+        @include font-size(14px);
+        @include color(#999);
+        @include padding(6px 0);
+        @include border(0 0 1px 0, #ccc, solid);
+      }
+      .toAct{
+        @include color(#999);
+      }
+      .toAct:hover{
+        @include color(#f22);
+        @include text-decoration(underline);
       }
     }
   }
@@ -38,14 +62,14 @@
       @include rect(100%, 90px);
       @include flexbox();
       @include padding(16px 0);
-      i{
+      i {
         @include rect(auto, 58px);
-        @include font-size(12px);
+        @include font-size(14px);
         @include line-height(58px);
         @include color(#0f0f0f);
         @include margin(0 20px);
       }
-      i:hover{
+      i:hover {
         @include color(#ff3232);
         @include text-decoration(underline);
       }
@@ -57,8 +81,26 @@
     }
   }
   .menupers{
-    @include rect(100%, 410px);
+    @include rect(100%, auto);
     @include background-color(#fff);
     @include margin(0 0 40px 0);
+    .ant-tabs-tabpane{
+      // @include padding(0 15px);
+      .inform{
+        @include flexbox();
+        @include font-size(14px);
+        @include line-height(24px);
+        @include color(#5d5d5d);
+        @include padding(15px 20px);
+        @include border(0 0 1px 0, #ebebeb, solid);
+        p{
+          @include flex();
+          @include rect(916px, auto);
+        }
+        span{
+          @include rect(auto, 100%);
+        }
+      }
+    }
   }
 }

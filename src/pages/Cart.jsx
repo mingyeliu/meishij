@@ -1,9 +1,31 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import '@/style/homedetail.scss'
+import api from '@/api/shkind'
 
 class Comp extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      list:{}
+    }
+  
+  }
+  componentDidMount(){
+    let id=this.props.match.params.id;
+    api.requestDataId(id).then(data=>{
+      console.log(data);
+      this.setState({
+        list:data[0]
+      })
+    }).catch(err=>console.log(err));
+  }
+  GoCart(){
+    this.props.history.push('/',{});
+  }
   render () {
+    let id=this.props.match.params.id;
+    console.log(id)
     return (
       <div className="content">
         <div className="top">
@@ -32,16 +54,16 @@ class Comp extends Component {
                 <img src="https://s1.st.meishij.net/p2/20180903/20180903120958_01864.jpg" className="img-small" alt="66"/>
               </div>
               <div className="pbc-r">
-                <h1>亚马逊VISIONS芝加哥刀具三件套</h1>
+                <h1>{this.state.list.shopname}</h1>
                 <form id="orderform">
                   <div className="buy-tab">
-                    <span>积分兑换</span>
+                    <span>商品详情</span>
                   </div>
                   <div className="buy-tab-1">
                     <ul>
                       <li>
-                        兑换积分：
-                        <strong className="price">53400</strong>
+                        商品价格：
+                        <strong className="price">￥{this.state.list.price}</strong>
                       </li>
                       <li>
                         达人专享：
@@ -51,15 +73,15 @@ class Comp extends Component {
                       <li>
                         用户评分：
                         <span className="star"></span>
-                        已兑换：<s>4</s> 件
+                        已出售：<s>{this.state.list.sales}</s> 件
                       </li>
                       <li>
-                        我要兑换：
-                        <input type="text" placeholder="1"/>
-                        件  （库存8件）
+                        我要购买：
+                        <input type="text" placeholder="1" disabled/>
+                        件  （库存{this.state.list.kucun}件）
                       </li>
                     </ul>
-                    <span className="buy">加入购物车</span>
+                    <span className="buy" onClick={this.GoCart.bind(this)}>加入购物车</span>
                     <span className="dingdan">立即购买</span>
                   </div>
                 </form>

@@ -1,12 +1,17 @@
 import React, { Component } from 'react'
-// import { Link } from 'react-dom'
-import { Divider } from 'antd'
+import { Link } from 'react-router-dom'
+import { Divider, Tabs } from 'antd'
 import "antd/dist/antd.css"
 
 class Comp extends Component {
-  // constructor (props) {
-  //   super(props);
-  // }
+  constructor (props) {
+    super(props);
+    // this.mytime = this.getTime.bind(this);
+    this.state = {
+      nick: '空白666',
+      time: ''
+    }
+  }
   componentDidMount () {
     let ali = Array.from(document.querySelectorAll("i"));
     // console.log(ali);
@@ -20,7 +25,22 @@ class Comp extends Component {
       })
     }
   }
+  // getTime () {
+  //   let date = new Date();
+  //   let year = date.getFullYear();
+  //   let month = date.getMonth() + 1;
+  //   let day = date.getDate();
+  //   let hours = date.getHours();
+  //   let min = date.getMinutes();
+  //   let mon = month.length === 2 ? month : '0' + month;
+  //   let d = day.length === 2 ? day : '0' + day;
+  //   let myDate = year + '-' + mon + '-' + d + ' ' + hours + ':' + min;
+  //   this.setState({
+  //     time: myDate
+  //   })
+  // }
   render () {
+    const TabPane = Tabs.TabPane;
     return (
       <div className = "persContent">
         <div className="margin">
@@ -30,18 +50,17 @@ class Comp extends Component {
             <div className="cont-c">
               <div className="neck">
                 <span>空白666</span>
-                <button className="btnGrade">LV1</button>
                 <button className="myletter">我的私信</button>
               </div>
               <div className="total">
-                <span>积分：24</span>
+                <Link to="#" className="toAct">积分：24</Link>
                 <Divider type="vertical" />
-                <span>经验值：6</span>
+                <Link to="#" className="toAct">经验值：6</Link>
               </div>
               <div className="adit">
                 2019-03-19加入美食杰
                 <Divider type="vertical" />
-                <span>编辑个人资料</span>
+                <Link to="#" className="toAct">编辑个人资料</Link>
               </div>
             </div>
             <div className="cont-r"></div>
@@ -58,7 +77,22 @@ class Comp extends Component {
               <li className="anav"><i herf="#">浏览记录</i></li>
             </ul>
           </div>
-          <div className="menupers"></div>
+          <div className="menupers">
+            <Tabs type="card">
+              <TabPane tab="通知列表" key="1">
+                <div className="inform">
+                  <p>亲爱的{ this.state.nick }，恭喜恭喜！欢迎初来乍到美食杰的你！从现在开始，只要多发菜谱，玩转论坛，“菜谱收集”的称号等着你呢！！我们期待你优秀的作品出炉！</p>
+                  <span>2019-03-13 09:05</span>
+                </div>
+                <div className="inform">
+                  <p>亲爱的空白666，欢迎加入美食杰，快来开始您的美食生活吧~<br />在美食杰，您可以——<br />在菜谱大全里学做菜，发菜谱；<br />在家居馆（即将上线）里用积分兑换礼品，参加试用或秒杀活动；里发起话题、回复和活动，找到志同道合的小伙伴；<br />其他问题请联系美食小编，祝您生活愉快！</p>
+                  <span>2019-03-13 09:05</span>
+                </div>
+              </TabPane>
+              <TabPane tab="我的私信列表" key="2">
+              </TabPane>
+            </Tabs>
+          </div>
         </div>
       </div>
     )

@@ -6,13 +6,14 @@ const Comp = ({list, classn2})=>(
   {
   list.map((item,index)=>{
     return(
-      <div className={classn2} key={item.id}>
+      <div className={classn2} key={index}>
         <div className="small_food_list " >
-          < Link to="/">
-            <img src={item.image} alt="tupian" />
+          < Link to={'/j/cart/'+item.id}>
+            <img src={item.image} alt="tupian" />1
+            
           </Link>
         </div>
-        </div>
+      </div>
       )
     })
   }

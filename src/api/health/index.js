@@ -4,7 +4,7 @@ import axios from 'axios';
 const api = {
   requestData () {
     return new Promise((resolve, reject) => {
-      axios.get('http://47.94.88.61:3000/api/allZHcai')
+      axios.get('http://47.94.88.61:3000/api/allZHcai?pageNumber=30')
         .then(data => {
           // console.log(data.data.data);
           resolve(data.data.data);

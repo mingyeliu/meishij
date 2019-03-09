@@ -13,6 +13,18 @@ const api = {
         reject(err)
       })
     })
+  },
+  requestDataId (id) {
+    return new Promise((resolve, reject) =>{
+      axios.get('http://47.94.88.61:3000/api/tiaoliao/search_id?id=' + id)
+      .then(data => {
+        // console.log(data)
+        resolve(data.data.data)
+      })
+      .catch(err => {
+        reject(err)
+      })
+    })
   }
 }
 export default api

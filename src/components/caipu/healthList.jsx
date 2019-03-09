@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import api from '@/api/health'
+import api from '@/api/caipu'
 import {Link} from 'react-router-dom'
 import { Card, Pagination, Breadcrumb } from 'element-react'
 
@@ -24,6 +24,7 @@ class Comp extends Component {
         totalcord: data.length
       })
     })
+    console.log(this.props.list1)
   }
 
   changePage () {
@@ -49,19 +50,35 @@ class Comp extends Component {
   }
   render () {
     let listarr = this.state.list
+    // console.log(listarr);
     let listHtml = [];
     let count = 0;
     listarr.map((item, index) => {
       if(count < 12){
         listHtml.push(
           <Card bodyStyle={{ padding: 0 }} key={ item.id } >
-            <Link to={'/j/detail/' + item.id*1}><img src={ item.image } alt={ item.type } onClick={this.Godetail.bind(this,item.id)} /></Link>
-            <div style={{ padding: 14 }} className="listTit" >
-              <span className='tit'>{ item.title }</span><br />
-              <span className='pingjia'>{ item.pingjia }</span><br />
-              <span className='emtitle'>{ item.emtitle }</span>
+            <div className="listtyle1">
+              <Link target="_blank" to={'/j/detail/' + item.id} title="牛肉丸太阳面" className="big">
+                <img className="img" alt={ item.type } src={ item.image } onClick={this.Godetail.bind(this,item.id)} />
+                <div className="i_w">
+                  <div className="i">
+                    <div className="c1">
+                      <strong>{ item.title }</strong>
+                      <span>{ item.pingjia }</span>
+                      <em>{ item.emtitle }</em>
+                    </div>
+                    <div className="c2">
+                      <ul>
+                        <li className="li1">{ item.step }</li>
+                        <li className="li2">{ item.weidao }</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <strong className="gx"><span>强身健体</span></strong>
+              </Link>
             </div>
-          </Card>
+         </Card> 
         )
         count++;
       }
@@ -70,7 +87,7 @@ class Comp extends Component {
     return (
       <div className="list">
         <div className="title">
-          <h1>合理的饮食，是身体健康的第一要素</h1>
+          <h1>印象中的那些妈妈的味道</h1>
           <Breadcrumb separator="|">
             <Breadcrumb.Item>最新</Breadcrumb.Item>
             <Breadcrumb.Item>最热</Breadcrumb.Item>
