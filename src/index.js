@@ -10,7 +10,7 @@ import '@/style/main.scss';
 ReactDOM.render(
   <Router>
     <Switch>
-      <Route path="/personal" component = { PersApp } />
+      <Route path="/u" component = { PersApp } />
       <Route path="/j" component = { OtherApp } />
       <Route path="/" component = { App } />
     </Switch>

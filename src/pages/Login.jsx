@@ -5,6 +5,7 @@ import '@/style/login.scss'
 import "antd/dist/antd.css"
 import store from '@/store'
 import action from '@/store/user/action'
+import api from '../api/user';
 
 class Comp extends Component {
   constructor (props){
@@ -25,8 +26,8 @@ class Comp extends Component {
       emailpwd:'',
       check01: true,
       check02: true,
-      content1:"",
-      content2:""
+      content1:"手机号登录",
+      content2:"邮箱登录"
     }
   }
   componentWillMount(){
@@ -148,13 +149,28 @@ class Comp extends Component {
     // localStorage.setItem('check02',this.state.check02)
   }
   onLogin(){
+    
     console.log(this.state.uservalue)
     store.dispatch(action.requestData1(this.state.uservalue)).then(data=>{
       var login = data.data[0];
       console.log(data.data[0]);
       if(login.username === this.state.uservalue && this.state.password === login.password){
-        console.log("登录成功")
-        this.props.history.push('/j/caipu')
+        this.setState({
+          content1:"登录成功"
+        })
+        setTimeout(()=>{
+          api.requestSearch(this.state.uservalue).then(data=>{
+            console.log(data.data);
+            if(data.data.length > 0){
+              this.props.history.push('/u/personal')
+            }else{
+              this.props.history.push('/u/user/xgzl')
+            }
+          })
+        },1000)
+        
+        
+        localStorage.setItem('userlogin',this.state.uservalue);
         if(!this.state.check01 === true){
           console.log(this.state.check01)
           localStorage.setItem('isLogin',this.state.uservalue);
@@ -164,19 +180,23 @@ class Comp extends Component {
           localStorage.setItem('pwd',"");
         }
         console.log(this);
-        this.setState({
-          content1: "登录成功"
-        })
+ 
       }else if(login.username !== this.state.uservalue ){
         console.log("登录失败")
         this.setState({
           content1: "未找到该用户",
           uservalue:''
         })
+        setTimeout(()=>{
+          this.props.history.push('/j/login')
+        },1000)
       }else if(login.username === this.state.uservalue && this.state.password !== login.password){
         this.setState({
           content1: "密码错误"
         })
+        setTimeout(()=>{
+          this.props.history.push('/j/login')
+        },1000)
       }
     })
     // if(!this.state.check01 === true) {
@@ -203,9 +223,11 @@ class Comp extends Component {
       var login = data.data[0]
       console.log(data.data[0])
       if(login.username === this.state.emailvalue && login.password === this.state.emailpwd){
-        this.props.history.push('/j/caipu')
+        this.props.history.push('/u/user/xgzl')
+        localStorage.setItem('userlogin',this.state.emailvalue);
         if(this.state.check02 !== true) {
           localStorage.setItem('isLogin_you',this.state.emailvalue);
+          
           localStorage.setItem('pwd1',this.state.emailpwd);
         }else{
           localStorage.setItem('isLogin_you',"");
@@ -215,11 +237,17 @@ class Comp extends Component {
         this.setState({
           content2: "登录成功"
         })
+        setTimeout(()=>{
+          this.props.history.push('/u/user/xgzl')
+        },1000)
       }else{
         console.log("登录失败")
         this.setState({
           content2: "登录失败"
         })
+        setTimeout(()=>{
+          this.props.history.push('/u/user/xgzl')
+        },1000)
       }
     })
     console.log(this.state.emailvalue)
@@ -257,11 +285,11 @@ class Comp extends Component {
                 <TabPane tab={<span>手机登录</span>} key="1">
                   <div className="shouji">
                     <div className="username">
-                      <Input size="large" type='text' placeholder="请输入手机号" value={this.state.uservalue} name="username" onChange={this.handler}/>
+                      <Input size="large" type='text' placeholder="请输入手机号" defaultValue={this.state.uservalue} name="username" onChange={this.handler}/>
                       <p className="cuowu1" ><Icon type="info_circle" />&nbsp;{this.state.cuowu}</p>
                     </div>
                     <div className="pwd">
-                      <Input size="large" type="password" placeholder="请输入密码" value={this.state.password} name="username" onChange={this.handlerpwd}/>
+                      <Input size="large" type="password" placeholder="请输入密码" defaultValue={this.state.password} name="username" onChange={this.handlerpwd}/>
                       {/* <p className="cuowu1" ><Icon type="info_circle" />&nbsp;{this.state.cuowu}</p> */}
                     </div>
                     <div className="check">
@@ -282,10 +310,10 @@ class Comp extends Component {
                 <TabPane tab={<span>邮箱登录</span>} key="2">
                   <div className="youxiang">
                    <div className="you_user">
-                    <Input size="large" placeholder="请输入邮箱号" value={this.state.emailvalue} name="email" onChange={this.handlemail.bind(this)}/>
+                    <Input size="large" placeholder="请输入邮箱号" defaultValue={this.state.emailvalue} name="email" onChange={this.handlemail.bind(this)}/>
                    </div>
                    <div className="you_pwd">
-                    <Input size="large" type="password" placeholder="请输入密码" value={this.state.emailpwd} name="email" onChange={this.onEmailpwd.bind(this)}/>
+                    <Input size="large" type="password" placeholder="请输入密码" defaultValue={this.state.emailpwd} name="email" onChange={this.onEmailpwd.bind(this)}/>
                    </div>
                    <div className="check_2_1">
                       {/* <Checkbox onChange={this.onCheck} className="check_1">我已阅读并且同意<Link to="#">美食杰用户使用协议</Link></Checkbox> */}

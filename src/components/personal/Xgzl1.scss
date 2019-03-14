@@ -1,0 +1,43 @@
+@import '@/qunar/reset.scss';
+
+.sixin_list{
+  @include rect(100%,450px);
+  @include background-color(#fafafa);
+  @include display(block);
+  @include padding(25px 35px);
+  @include margin(0 0 60px);
+  @include float(left);
+  .useredit_ul{
+    @include rect(450px,100%);
+    // @include background-color(#FF3232);
+    
+    .usereditl1{
+      @include rect(100%,50px);
+      @include color(#666666);
+      list-style: none;
+      .userspan1{
+        @include display(inline-block);
+        @include rect(20%, 100%);
+      }
+      .userspan4{
+        @include rect(20%, 30%);
+      }
+      .spandiv01{
+        @include rect(70%,100%);
+        @include display(inline-block);
+        
+        .xgborder{
+          @include border-radius(0);
+        }
+      }
+    }
+    .userditl2{
+      @include rect(100%,30%);
+    }
+    .userditl3{
+      @include rect(80%, auto);
+      @include align();
+      @include margin(5% 0 0);
+    }
+  }
+}

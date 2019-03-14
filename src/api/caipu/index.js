@@ -14,9 +14,9 @@ const api = {
         })
     })
   },
-  requestJCDatatype(caitype) {
+  requestJCDatatype(caitype,pageCode) {
     return new Promise((resolve, reject) => {
-      axios.get('http://47.94.88.61:3000/api/allJCcai/search_caitype?caitype='+caitype)
+      axios.get('http://47.94.88.61:3000/api/allJCcai/search_caitype?caitype='+caitype+'&pageCode='+pageCode+'&pageNumber=12')
         .then(data => {
           // console.log(data.data.data);
           resolve(data.data.data);
@@ -38,9 +38,9 @@ const api = {
         })
     })
   },
-  requestZHDatatype(caitype) {
+  requestZHDatatype(caitype,pageCode) {
     return new Promise((resolve, reject) => {
-      axios.get('http://47.94.88.61:3000/api/allZHcai/search_caitype?caitype='+caitype)
+      axios.get('http://47.94.88.61:3000/api/allZHcai/search_caitype?caitype='+caitype+'&pageCode='+pageCode+'&pageNumber=12')
         .then(data => {
           // console.log(data.data.data);
           resolve(data.data.data);
@@ -61,7 +61,20 @@ const api = {
           console.log(err);
         })
     })
+  },
+  requestAllCai(id) {
+    return new Promise((resolve, reject) => {
+      axios.get('http://47.94.88.61:3000/api/allCai/detail?id='+id)
+        .then(data => {
+          // console.log(data.data.data);
+          resolve(data.data.data);
+        })
+        .catch(err => {
+          console.log(err);
+        })
+    })
   }
+
 }
 
 export default api;

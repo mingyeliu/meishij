@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-
+import creatHistory from 'history/createBrowserHistory';
 class Comp extends Component {
   // constructor (props) {
   //   super(props);
   // }
+  onclikUpdate(){
+    creatHistory().go(0);
+  }
   render () {
     return (
       <nav className="nav">
@@ -16,35 +19,35 @@ class Comp extends Component {
               <div className="dww clearfix dww_cpdq">
                 <div className="dwitem clearfix pngFix">
                   <dl className="clearfix">
-                    <dt><Link to="https://www.meishij.net/chufang/diy/">家常菜谱</Link></dt>		
-                    <dd><Link to="https://www.meishij.net/chufang/diy/jiangchangcaipu/">家常菜</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/langcaipu/">凉菜</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/sushi/">素食</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/wancan/">晚餐</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/sijiacai/">私家菜</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/recaipu/">热菜</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/haixian/">海鲜</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/yunfu/">孕妇</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/zaocan/">早餐</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/wucan/">午餐</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/tianpindianxin/">甜品点心</Link></dd>	
+                    <dt><Link to="#" disabled>家常菜谱</Link></dt>		
+                    <dd><Link to={'/j/kindstyle/家常菜'} onClick={this.onclikUpdate.bind(this)}>家常菜</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/凉菜'} onClick={this.onclikUpdate.bind(this)}>凉菜</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/素食'} onClick={this.onclikUpdate.bind(this)}>素食</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/早餐'} onClick={this.onclikUpdate.bind(this)}>早餐</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/午餐'} onClick={this.onclikUpdate.bind(this)}>午餐</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/热菜'} onClick={this.onclikUpdate.bind(this)}>热菜</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/海鲜'} onClick={this.onclikUpdate.bind(this)}>海鲜</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/甜品'} onClick={this.onclikUpdate.bind(this)}>点心甜品</Link></dd>	
+                    <dd><Link to={'/j/kindstyle/糕点'} onClick={this.onclikUpdate.bind(this)}>糕点主食</Link></dd>	
+                    <dd><Link to="https://www.meishij.net/chufang/diy/zaocan/">私家菜</Link></dd>	
+                    <dd><Link to="https://www.meishij.net/chufang/diy/wucan/">晚餐</Link></dd>	
+                    <dd><Link to="https://www.meishij.net/chufang/diy/tianpindianxin/">孕妇</Link></dd>	
                     <dd><Link to="https://www.meishij.net/chufang/diy/tangbaocaipu/">汤粥</Link></dd>	
                     <dd><Link to="https://www.meishij.net/chufang/diy/baobaocaipu/">宝宝食谱-婴儿食谱</Link></dd>	
-                    <dd><Link to="https://www.meishij.net/chufang/diy/gaodianxiaochi/">糕点主食</Link></dd>	
                     <dd><Link to="https://www.meishij.net/chufang/diy/weibolucaipu/">微波炉</Link></dd>
                   </dl>
                 </div>
                 <div className="dwitem dwitem_half clearfix">
                   <dl className="clearfix">
-                    <dt><Link to="https://www.meishij.net/china-food/caixi/">中华菜系</Link></dt>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/chuancai/">川菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/yuecai/">粤菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/dongbeicai/">东北菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/xiangcai/">湘菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/lucai/">鲁菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/zhecai/">浙菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/hubeicai/">湖北菜</Link></dd>
-                    <dd><Link to="https://www.meishij.net/china-food/caixi/qingzhencai/">清真菜</Link></dd>
+                    <dt><Link to="#">中华菜系</Link></dt>
+                    <dd><Link to={'/j/kindstyle/川菜'} onClick={this.onclikUpdate.bind(this)}>川菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/粤菜'} onClick={this.onclikUpdate.bind(this)}>粤菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/东北菜'} onClick={this.onclikUpdate.bind(this)}>东北菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/湘菜'} onClick={this.onclikUpdate.bind(this)}>湘菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/鲁菜'} onClick={this.onclikUpdate.bind(this)}>鲁菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/浙菜'} onClick={this.onclikUpdate.bind(this)}>浙菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/徽菜'} onClick={this.onclikUpdate.bind(this)}>徽菜</Link></dd>
+                    <dd><Link to={'/j/kindstyle/闽菜'} onClick={this.onclikUpdate.bind(this)}>闽菜</Link></dd>
                   </dl>
                 </div>
                 <div className="dwitem dwitem_half clearfix">

@@ -9,9 +9,12 @@ http://localhost:3000/#/j/cart 商品详情
 http://localhost:3000/#/j/detail 做饭步骤
 http://localhost:3000/#/j/healthy 健康饮食
 http://localhost:3000/#/j/jiajuguan 家居馆
+http://localhost:3000/#/j/kindstyle 分类
 
 App:
 http://localhost:3000/#/personal 个人中心
 
 PersApp:
 http://localhost:3000/#/home 首页
+
+

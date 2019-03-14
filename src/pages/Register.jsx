@@ -26,8 +26,8 @@ class Comp extends Component {
       check01: true,
       check02: true,
       isdata:'',
-      content1:'',
-      content2:''
+      content1:'手机号注册',
+      content2:'邮箱注册'
     }
   }
   Show(){
@@ -53,7 +53,10 @@ class Comp extends Component {
     //   uservalue: event.target.value
     // })
     if (event.target.value.replace(/\s/g, '').length === 11) {
-      
+      console.log(this.state.uservalue)
+      this.setState({
+        uservalue:event.target.value
+      })
       console.log(this.state.uservalue)
     }
     
@@ -74,13 +77,6 @@ class Comp extends Component {
         type_icon:'info_circle'
       })
     }
-  }
-  Yanzheng(){ 
-    setTimeout(() => {
-      this.setState({
-        yamvalue:"123456"
-      })
-    }, 1000);
   }
   handlerpwd(event) {
     console.log(event);
@@ -103,6 +99,13 @@ class Comp extends Component {
     })
     console.log(this.state.check01)
   }
+  Yanzheng(){ 
+    setTimeout(() => {
+      this.setState({
+        yamvalue:"123456"
+      })
+    }, 1000);
+}
   onZhuce(){
     if(!this.state.check01 === true) {
       console.log(this.state.check01)
@@ -135,12 +138,17 @@ class Comp extends Component {
             this.setState({
               content1:"注册成功"
             })
-            this.props.history.push('/userapp/login');
+            setTimeout(()=>{
+              this.props.history.push('/j/login');
+            },1000)
           }else if(data === 0){
             console.log("注册过了")
             this.setState({
               content1:"已注册"
             })
+            setTimeout(()=>{
+              this.props.history.push('/j/login');
+            },1000)
           } else if(data === -1){
             console.log("注册失败")
             this.setState({
@@ -179,7 +187,7 @@ class Comp extends Component {
     // var msg = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
     var msg = /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/g;
     
-    if(this.state.check02 === true) {
+    if(!this.state.check02 === true) {
       if(!msg.test(this.state.emailvalue)){
         this.setState({
           content2:'邮箱格式不正确'
@@ -197,12 +205,17 @@ class Comp extends Component {
             this.setState({
               content2:'注册成功'
             })
-            this.props.history.push('/userapp/login');
+            setTimeout(()=>{
+              this.props.history.push('/j/login');
+            },1000)
             console.log("注册成功")
           }else if(data === 0){
             this.setState({
               content2:'已注册'
             })
+            setTimeout(()=>{
+              this.props.history.push('/j/login');
+            },1000)
             console.log("已注册")
             console.log(this);
           }else if(data === 0){
@@ -213,12 +226,13 @@ class Comp extends Component {
           }
           console.log(typeof(data))
         })
-        console.log("注册成功");
+        // console.log("注册成功");
       }
       // console.log(this.state.emailvalue)
       // console.log(this.state.emailpwd)
       // store.dispatch(action.requestData())
-    }else if(this.state.check02 === false){
+      
+    }else if(!this.state.check02 === false){
       this.setState({
         content2:'请阅读并点击同意美食杰用户使用条例'
       })
@@ -255,7 +269,7 @@ class Comp extends Component {
                 <TabPane tab={<span>手机注册</span>} key="1">
                   <div className="shouji">
                     <div className="username">
-                      <Input size="large" placeholder="请输入手机号" value={this.state.uservalue} name="username" onChange={this.handler}/>
+                      <Input size="large" placeholder="请输入手机号" defaultValue={this.state.uservalue} name="username" onChange={this.handler}/>
                       <p className="cuowu1" ><Icon type="info_circle" />&nbsp;{this.state.cuowu}</p>
                     </div>
                     <div className="yanzheng">
@@ -268,7 +282,7 @@ class Comp extends Component {
                       <p className="cuowu1" ><Icon type="info_circle" />&nbsp;</p>
                     </div>
                     <div className="pwd">
-                      <Input size="large" type="password" placeholder="请输入密码" value={this.state.password} name="username" onChange={this.handlerpwd}/>
+                      <Input size="large" type="password" placeholder="请输入密码" defaultValue={this.state.password} name="username" onChange={this.handlerpwd}/>
                       {/* <p className="cuowu1" ><Icon type="info_circle" />&nbsp;{this.state.cuowu}</p> */}
                     </div>
                     <div className="check">
@@ -287,10 +301,10 @@ class Comp extends Component {
                 <TabPane tab={<span>邮箱注册</span>} key="2">
                   <div className="youxiang">
                     <div className="you_user">
-                      <Input size="large" placeholder="请输入邮箱号" value={this.state.emailvalue} name="email" onChange={this.handlemail.bind(this)}/>
+                      <Input size="large" placeholder="请输入邮箱号" defaultValue={this.state.emailvalue} name="email" onChange={this.handlemail.bind(this)}/>
                     </div>
                     <div className="you_pwd">
-                      <Input size="large" type="password" placeholder="请输入密码" value={this.state.emailpwd} name="email" onChange={this.onEmailpwd.bind(this)}/>
+                      <Input size="large" type="password" placeholder="请输入密码" defaultValue={this.state.emailpwd} name="email" onChange={this.onEmailpwd.bind(this)}/>
                     </div>
                     <div className="check_1">
                       <Checkbox onChange={this.onCheck} className="check_1">我已阅读并且同意<Link to="#">美食杰用户使用协议</Link></Checkbox>

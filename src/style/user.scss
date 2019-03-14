@@ -1,0 +1,63 @@
+@import '@/qunar/reset.scss';
+
+.contentUser{
+  @include rect(100%, auto);
+  @include background-color(#fbe8c8);
+  
+  .margin{
+    .h1_1{
+      @include line-height(120px);
+      @include font-size(24px);
+      @include text-align();
+    }
+    .user_inner_tab{
+      @include rect(100%, 68px);
+      @include background-color(#fff);
+      @include flexbox();
+      @include fullscreen(relative);
+      @include border(0 0 1px 0, #eee,solid);
+      .backuser{
+        @include display(block);
+        @include rect(68px,68px);
+        background: url("https://s1.c.meishij.net/n/images/userbackbtn1.gif") no-repeat;
+        @include border(0 1px 0 0, #eee,solid);
+      }
+      .backuser:hover{
+        background-position-y: -68px;
+      }
+      ul.user_inner_tab_ul{
+        @include flex();
+        @include padding(14px 20px);
+        @include flexbox();
+
+        li{
+          // @include display(block);
+          @include rect(15%, 40px);
+          @include font-size(14px);
+          // @include fullscreen(relative);
+          // vertical-align:top;
+          @include line-height(40px);
+          @include align();
+          // @include margin(0 10px 0 0);
+         
+          .user_inner{
+            @include padding(0 14px);
+            @include display(block);
+            @include line-height(40px);
+            @include color(#333);
+            @include text-decoration(none);
+            &.active{
+              @include background-color(#FF3232);
+              @include border-radius(5px);
+              @include color(#fff);
+            }
+          }
+        }
+        li:hover{
+          @include background-color(#eee);
+          @include border-radius(5px);
+        }
+      }
+    }
+  }
+} 

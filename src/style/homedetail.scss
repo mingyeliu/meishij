@@ -32,6 +32,8 @@
         line-height: 60px;
         color: #666;
         font-size: 12px;
+        display: flex;
+        justify-content: flex-start;
         span {
           padding: 0px 6px;
           &:hover {
@@ -43,6 +45,7 @@
       .products-buy-content {
         overflow: hidden;
         background: #fff;
+        margin-bottom: 25px;
         .pbc-l {
           float: left;
           padding: 20px 0px 20px 20px;
@@ -62,14 +65,15 @@
         .pbc-r {
           float: left;
           padding: 20px 20px 0px 20px;
-          width: 990px;
+          width: 485px;
           overflow: hidden;
           h1 {
+            width: 480px;
             color: #333;
             font-size: 24px;
             font-family: Microsoft Yahei,黑体;
             line-height: 32px;
-            padding: 20px 10px 20px 0px;
+            padding: 20px 0;
             font-weight: 400;
           }
           #orderform {

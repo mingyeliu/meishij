@@ -1,6 +1,31 @@
 @import './public.scss';
 
 .header{
+  position: relative;
+
+  #btnTop{
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    bottom: -25px;
+    right: 50px;
+    background: #ff3232;
+    color: #fff;
+    // font: 700 18px/24px "";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    border: 0;
+    z-index: 2;
+    border-radius: 5px;
+    cursor: pointer;
+    // display: none;
+  }
+  #btnTop:hover{
+    bottom: 5px;
+    transition: 0.3s linear all;
+  }
   .h-l{
     float: left;
     display: block;
@@ -24,7 +49,9 @@
       border: 2px solid #fff;
       border-top-left-radius: 4px;
       border-bottom-left-radius: 4px;
-      font:12px/36px "";
+      // font:12px/36px "";
+      font-size:12px;
+      line-height: 36px;
     }
     
     .search2{
@@ -55,7 +82,10 @@
       float: right;
       margin-right: 0px;
       color: #fff;
-      font: 12px/28px "微软雅黑";
+      // font: 12px/28px "微软雅黑";
+      font-size: 12px;
+      font-family: "微软雅黑";
+      line-height: 28px;
       padding: 0px 10px;
       border-radius: 4px;
     }
@@ -65,19 +95,74 @@
     }
     
     .qq{
-      padding-left: 34px;
-      background: url(https://s1.c.meishij.net/n/images/topdsflogin_icon.gif) 3px 0px no-repeat;
+      text-align: center;
+      // padding-left: 34px;
+      // background: url(https://s1.c.meishij.net/n/images/topdsflogin_icon.gif) 3px 0px no-repeat;
     }
     .qq:hover{
-      background: rgba(0,0,0,0.3) url(https://s1.c.meishij.net/n/images/topdsflogin_icon.gif) 3px 0 no-repeat;
+      background: rgba(0,0,0,0.3);
     }
 
     .wb{
-      padding-left: 34px;
-      background: url(https://s1.c.meishij.net/n/images/topdsflogin_icon.gif) 3px -28px no-repeat;
+      text-align: center;
+      // padding-left: 34px;
+      // background: url(https://s1.c.meishij.net/n/images/topdsflogin_icon.gif) 3px -28px no-repeat;
     }
     .wb:hover{
-      background: rgba(0,0,0,0.3) url(https://s1.c.meishij.net/n/images/topdsflogin_icon.gif) 3px -28px no-repeat;
+      background: rgba(0,0,0,0.3);
+    }
+  }
+  .head-r{
+    float: right;
+    // overflow: hidden;
+    margin-top: 50px;
+    position: relative;
+    display: flex;
+
+    a.a1{
+      display: block;
+      float: left;
+      height: 28px;
+      float: right;
+      margin-right: 0px;
+      color: #fff;
+      // font: 12px/28px "微软雅黑";
+      font-size: 12px;
+      line-height: 28px;
+      font-family: "微软雅黑";
+      padding: 0px 10px;
+      border-radius: 4px;
+    }
+    a.a1:hover{
+      background: rgba(0,0,0,0.3);
+    }
+    .hend{
+      display: none;
+      position: absolute;
+      z-index: 2;
+      width: 120px;
+      background-color: #fff;
+      top: 28px;
+      left: -20px;
+      .l1{
+        width: 80px;
+        height: 28px;
+        margin: 10px 20px;
+        text-align: center;
+        color: #333;
+        // font: 12px/28px "微软雅黑";
+        font-size: 12px;
+        line-height: 28px;
+        font-family: "微软雅黑";
+        background-color: #ededed;
+      }
+      .l1:hover{
+        background-color: #fc1314;
+        color: #fff;
+      }
+    }
+    .user:hover .hend{
+      display: block;
     }
   }
 }
@@ -93,19 +178,32 @@
       .a1{
         display: block;
         height: 76px;
-        font:700 18px/76px "";
+        // font:700 18px/76px "";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 76px;
         color:#444;
         position: relative;
         padding: 0px 24px;
-
+        
         img{
           display: block;
           width: 24px;
           height: 23px;
           position: absolute;
-          right: -16px;
-          top: 8px;
+          right: 8px;
+          top: 10px;
         }
+      }
+    }
+    li:hover{
+      border-bottom: 5px solid #fa1314;
+      
+      // background-color: #fafafa;
+      // line-height: 71px;
+      .a1{
+        height: 71px;
+        background-color: #fafafa;
       }
     }
 
@@ -113,9 +211,10 @@
       background: url(https://s1.c.meishij.net/n/images/msj_menuarrow.gif) right center no-repeat;
     }
 
-    .te1:hover{
-      background: #fafafa;
-    }
+    // .te1:hover{
+    //   border-bottom: 5px solid #fa1314;
+    //   background: #f1f1f1;
+    // }
 
     // 导航“菜谱大全”的二级菜单
     .te2{
@@ -214,11 +313,11 @@
     }
     .te3:hover .dw{
       display: block;
-      z-index: 1;
+      z-index: 3;
     }
     .te4:hover .dw{
       display: block;
-      z-index: 1;
+      z-index: 3;
     }
   }
 }
@@ -359,6 +458,7 @@
 
         a{
           display: inline-block;
+          color: #666;
         }
       }
     }
@@ -611,6 +711,7 @@
                     padding: 0px 14px 0px;
                     font-size: 12px;
                     color: #999;
+                    
                   }
   
                   em {
@@ -770,6 +871,7 @@
       a{
         display: block;
         height: 100%;
+        color: #666;
       }
     }
   }
@@ -880,7 +982,7 @@
   }
 }
 .active{
-  background: #ff3232;
+  color: #ff3232;
 }
 
 .footer{

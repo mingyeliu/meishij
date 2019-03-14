@@ -19,7 +19,7 @@ class Comp extends Component {
   }
 
   componentDidMount () {
-    // console.log(this.props)
+    console.log(this.props)
     api.requestJCDatatype(this.props.caiming,1).then(data=>{
   
       if(data.length >0){
@@ -28,7 +28,7 @@ class Comp extends Component {
           list: data,
           totalcord: 90
         })
-        // console.log(this.state.list);
+        console.log(this.state.list);
       }
     }).catch(err=>console.log(err))
 
@@ -39,26 +39,27 @@ class Comp extends Component {
           list: data,
           totalcord: 90
         })
-        // console.log(this.state.list);
+        console.log(this.state.list);
       }
     }).catch(err=>console.log(err))
     // console.log(this.props.list1)
   }
 
   onChange (event,pageNumber) {
-    // console.log(event);
-    // console.log(pageNumber)
+    console.log(event);
+    console.log(pageNumber)
     // var pageCode = 2
     console.log(this.props.caiming)
       api.requestJCDatatype(this.props.caiming,event).then(data=>{
-        if(data.length >0){
-          this.setState({
-            // data: data,
-            list: data,
-            totalcord: 90
-          })
-          // console.log(this.state.list);
-        }
+  
+      if(data.length >0){
+        this.setState({
+          // data: data,
+          list: data,
+          totalcord: 90
+        })
+        console.log(this.state.list);
+      }
     }).catch(err=>console.log(err))
 
     api.requestZHDatatype(this.props.caiming,event).then(data=>{
@@ -68,50 +69,60 @@ class Comp extends Component {
           list: data,
           totalcord: 90
         })
-        // console.log(this.state.list);
+        console.log(this.state.list);
       }
     }).catch(err=>console.log(err))
     // this.setState({
     //   currentPage:this.state.currentPage+1
     // })
+
   }
+
 
   Godetail(id){
     console.log(1,id)
   }
   render () {
     let listarr=[]
-
-    listarr = this.state.list
+    // console.log(this.props.list1)
+    // if (this.props.list1.length > 0){
+      // listarr = this.props.list1
+      listarr = this.state.list
+      
+    // }else{
+      // listarr = this.state.list
+    // }
+    
+    // console.log(listarr);
     let listHtml = [];
-
+    // let count = 0;
     listarr.map((item, index) => {
-      listHtml.push(
-        <Card bodyStyle={{ padding: 0 }} key={ item.id } >
-          <div className="listtyle1">
-            <Link target="_blank" to={'/j/detail/' + item.id} title="牛肉丸太阳面" className="big">
-              <img className="img" alt={ item.type } src={ item.image } onClick={this.Godetail.bind(this,item.id)} />
-              <div className="i_w">
-                <div className="i">
-                  <div className="c1">
-                    <strong>{ item.title }</strong>
-                    <span>{ item.pingjia }</span>
-                    <em>{ item.emtitle }</em>
-                  </div>
-                  <div className="c2">
-                    <ul>
-                      <li className="li1">{ item.step }</li>
-                      <li className="li2">{ item.weidao }</li>
-                    </ul>
+        listHtml.push(
+          <Card bodyStyle={{ padding: 0 }} key={ item.id } >
+            <div className="listtyle1">
+              <Link target="_blank" to={'/j/detail/' + item.id} title="牛肉丸太阳面" className="big">
+                <img className="img" alt={ item.type } src={ item.image } onClick={this.Godetail.bind(this,item.id)} />
+                <div className="i_w">
+                  <div className="i">
+                    <div className="c1">
+                      <strong>{ item.title }</strong>
+                      <span>{ item.pingjia }</span>
+                      <em>{ item.emtitle }</em>
+                    </div>
+                    <div className="c2">
+                      <ul>
+                        <li className="li1">{ item.step }</li>
+                        <li className="li2">{ item.weidao }</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <strong className="gx"><span>强身健体</span></strong>
-            </Link>
-          </div>
-        </Card> 
-      )
-      
+                <strong className="gx"><span>强身健体</span></strong>
+              </Link>
+            </div>
+         </Card> 
+        )
+        // count++;
       return ''
     })
     return (

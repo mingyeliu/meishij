@@ -482,9 +482,6 @@ class Comp extends Component {
               <SHkinds classn1={this.state.classn1} classn2={this.state.classn2} list={this.state.list}/>
             </div>
           </div>
-          <h3 className="jjg_titles">
-              
-          </h3>
           <div className="jjg_foodsitem">
             <div className="jjg_foods_left jfl_l2">
               <div className="foods_left">
@@ -511,9 +508,7 @@ class Comp extends Component {
               <SHkind1s  classn1={this.state.classn3} classn2={this.state.classn4} list1={this.state.list1}/>
             </div>
           </div>
-          <h3 className="jjg_titles">
-              
-          </h3>
+        
           <div className="jjg_foodsitem">
             <div className="jjg_foods_left">
               <div className="foods_left">

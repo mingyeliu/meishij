@@ -1,10 +1,12 @@
 @import '@/qunar/reset.scss';
 html, body, #root, .page{
-  @include rect(100%, 100%);
+  // @include rect(100%, 100%);
 }
 .margin {
-  @include rect(990px, auto);
-  @include margin(0 auto);
+  // @include rect(990px, auto);
+  // @include margin(0 auto);
+  width: 990px;
+  margin: 0 auto;
 }
 
 .page {

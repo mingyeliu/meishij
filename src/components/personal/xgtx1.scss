@@ -1,0 +1,8 @@
+@import '@/qunar/reset.scss';
+.xgtx_list{
+  @include rect(100%,350px);
+  @include background-color(#fafafa);
+  @include display(block);
+  @include padding(20px 0 0 68px);
+  @include float(left);
+}

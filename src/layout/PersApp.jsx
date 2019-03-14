@@ -1,17 +1,22 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import HeaderPers from '@/pages/HeaderPers';
-import Nav from '@/pages/Nav';
-import Personal from '@/pages/Personal';
-import OtherFooter from '@/pages/OtherFooter';
+import React, { Component } from 'react'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import HeaderUser from '@/pages/HeaderUser'
+import Nav from '@/pages/Nav'
+import Personal from '@/pages/Personal'
+import OtherFooter from '@/pages/OtherFooter'
+import User from '@/pages/User'
 
 class PersApp extends Component {
   render () {
     return (
       <div className = "page">
-        <HeaderPers />
+        <HeaderUser />
         <Nav />
-        <Route path="/personal" component = { Personal } />
+        <Switch>
+          <Route path="/u/user" component = { User } />
+          <Route path="/u/personal" component = { Personal } />
+          <Redirect path="/u" to="/u/personal" />
+        </Switch>
         <OtherFooter />
       </div>
     )

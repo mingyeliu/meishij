@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import Headr from '@/components/header/head-r'
 
 class Comp extends Component {
   
@@ -7,17 +8,16 @@ class Comp extends Component {
     return (
       <header className = "header">
         <div className="margin">
+          <div id="topAnchor"></div>
+          <div>
+            <a href="#topAnchor"><button id="btnTop" title="返回顶部">返回顶部</button></a>
+          </div>
           <Link to="/home" className="h-l"></Link>
           <div className="h-c">
             <input type="search" name="" placeholder="请输入菜谱/食材/菜单/作者" className="search1" />
             <input type="submit" value="搜索" className="search2" /> 
           </div>
-          <div className="h-r">
-            <Link to="/j/login" className="b1">登录</Link>
-            <Link to="/j/register" className="b1">注册</Link>
-            <Link to="#" className="wb">微博登录</Link>
-            <Link to="#" className="qq">QQ登录</Link>    
-          </div>
+          <Headr />
         </div>  
       </header>
     )

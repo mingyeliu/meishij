@@ -1,0 +1,145 @@
+.goodsContent {
+  width: 100%;
+  background-color: #fbe8c8;
+  .margin {
+    .cart-top {
+      margin: 30px 0 0;
+      ul {
+        border-top: 3px solid #ccc;
+        height: 40px;
+        background-color: #ededed;
+        display: flex;
+        justify-content: space-around;
+        li {
+          font-size: 14px;
+          font-family: Microsoft Yahei;
+          line-height: 40px;
+          margin: 0 60px;
+        }
+      }
+    }
+    .cart-middle {
+      ul.tiao {
+        // border: 1.5px solid #888;
+        background-color: #fff;
+        border-bottom: 0;
+        padding: 20px 0;
+        li.c1 {
+          border-bottom: 1px solid #ccc;
+          // border-top: 1px solid #ccc;
+          .G_list {
+            display: flex;
+            // justify-content: space-around;
+            // margin:0 30px;
+            .G_img {
+              width: 260px;
+              display: flex;
+              justify-content: space-around;
+              margin: 20px 0;
+              input {
+                margin: 25px 0;
+                line-height: 118px;
+              }
+              img {
+                height: 70px;
+                width: 70px;
+              }
+            }
+            span.title {
+              display: inline-block;
+              width: 190px;
+              text-align: center;
+              padding-top: 40px; 
+            }
+            p.danjia {
+              width: 120px;
+              text-align: center;
+              span {
+                display: inline-block;
+                padding-top: 40px;
+              }
+            }
+            .G_Content {
+              .G_selected {
+                margin: 36px 10px 0;
+                border: 1px solid #DDDDDD;
+                button {
+                  border: 0;
+                  border-bottom: 1px solid #DDDDDD;
+                  display: inline-block;
+                  height: 25px;width: 30px;
+                }
+                input {
+                  border: 0;
+                  height: 25px;width: 55px;
+                  text-align: center;
+                }
+              }
+            }
+            span.xiaoji {
+              width: 140px;
+              text-align: center;
+              display: inline-block;
+              margin-top: 40px;
+            }
+            .G_del {
+              margin-top: 35px;
+              width: 140px;
+              text-align: center;
+              button {
+                border: 0;background: 0;
+                color: #fff;
+                background-color: #f33;
+                font-size: 16px;
+                padding: 0 3px;
+                // border: 1px solid #f55;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //底部
+    .cart-bottom {
+      margin-bottom: 40px;
+      // border-bottom: 1.5px solid #ccc;
+      // margin-top: 30px;
+      height: 40px;
+      background: #ededed;
+      line-height: 40px;
+      position: relative;
+      .G_footer {
+        display: flex;
+        .G_Checkbox {
+          margin-left: 60px;
+          input {
+            margin-right: 5px;
+          }
+        }
+        .G_Price {
+          position: absolute;
+          right: 260px;top: 0;bottom: 0;
+        }
+        .G_Button {
+          display: inline-block;
+          position: absolute;
+          right: 1px;top: 0;bottom: 0;
+          button {
+            display: inline-block;
+            border: 0;
+            border-left: 1px solid #DDDDDD;
+            background: #fc1314;
+            border-radius: 10px;
+            height: 38px;
+            padding: 0 10px;
+            color: #fff;font-size: 14px; font-weight: bold;
+          }
+        }
+      }
+      
+      
+    }
+  }
+}

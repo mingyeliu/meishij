@@ -22,9 +22,11 @@
         @include border(0px 1px 0px 0px, #ccc, solid );
         @include margin(0);
         @include padding(0);
+        
         .jjg_menu_item{
           @include rect(100%,75px);
           @include border(0 0 1px 0, #ccc,solid);
+          
           @include padding(22px 0 22px 0);
           background:url("https://s1.c.meishij.net/n/images/jjg_menuicons.gif") no-repeat;
           background-position-y: -15px;
@@ -67,10 +69,12 @@
           }
         }
         .image_menu1:hover{
+
           background-position-y: -315px;
           @include background-color(#ff3232);
           .menu1_left{
             display: block;
+            
           }
           
           // z-index: 10;
@@ -156,6 +160,8 @@
       @include rect(100%,396px);
       @include flexbox();
       @include background-color(#fff);
+      @include margin(0 0 100px);
+      
       .jjg_foods_left{
         @include rect(198px,100%);
         // @include background-color(rgb(236, 104, 104));
@@ -267,4 +273,8 @@
 
 .jfl_l2{
   @include background-color(#FFF9E8);
+}
+.u1{
+  @include background-color(white);
+  
 }

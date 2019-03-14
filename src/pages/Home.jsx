@@ -12,6 +12,18 @@ class Comp extends Component {
       className4:"index_sc_dd ",
     }
   }
+  componentWillMount(){
+    if(localStorage.getItem("userlogin") === null){
+      localStorage.setItem("userlogin","");
+      console.log(localStorage.getItem("userlogin"))
+      window.location.reload()
+    }else{
+      console.log(666)
+      console.log(localStorage.getItem("userlogin"))
+      
+    }
+    console.log("afsdfsdafsd")
+  }
   active1(){
     console.log(1)
     this.setState({

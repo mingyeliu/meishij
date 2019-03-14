@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import api from '@/api/user'
 import { Divider, Tabs } from 'antd'
 import "antd/dist/antd.css"
 
@@ -9,9 +10,13 @@ class Comp extends Component {
     // this.mytime = this.getTime.bind(this);
     this.state = {
       nick: '空白666',
-      time: ''
+      time: '',
+      datetime1:'2015/01/01',
+      sex:"未知",
+      qianming:"哥从未来过"
     }
   }
+  
   componentDidMount () {
     let ali = Array.from(document.querySelectorAll("i"));
     // console.log(ali);
@@ -24,21 +29,35 @@ class Comp extends Component {
         this.className = "active";
       })
     }
+   
+    if(localStorage.getItem("userlogin") ===""){
+      console.log("未登录")
+    }else{
+      var a = localStorage.getItem("userlogin")
+      setTimeout(()=>{
+        
+        api.requestSearch1(a).then(data=>{
+          if(data===undefined){
+            console.log(data)
+            // setTimeout(()=>{
+            //   window.location.reload();
+            // },2)
+          }else{
+            this.setState({
+              nick:data.nickname,
+              datetime1:data.shengri,
+              qianming:data.qianming,
+              sex:data.sex,
+              
+            })
+          }
+          console.log(data)
+      })
+      },40)
+    }
+  
   }
-  // getTime () {
-  //   let date = new Date();
-  //   let year = date.getFullYear();
-  //   let month = date.getMonth() + 1;
-  //   let day = date.getDate();
-  //   let hours = date.getHours();
-  //   let min = date.getMinutes();
-  //   let mon = month.length === 2 ? month : '0' + month;
-  //   let d = day.length === 2 ? day : '0' + day;
-  //   let myDate = year + '-' + mon + '-' + d + ' ' + hours + ':' + min;
-  //   this.setState({
-  //     time: myDate
-  //   })
-  // }
+
   render () {
     const TabPane = Tabs.TabPane;
     return (
@@ -49,19 +68,21 @@ class Comp extends Component {
             <div className="aImg"><img src="https://s1.c.meishij.net/images/default/tx2_1.png" alt="头像"/></div>
             <div className="cont-c">
               <div className="neck">
-                <span>空白666</span>
+                <span>{this.state.nick}</span>
                 <button className="myletter">我的私信</button>
               </div>
               <div className="total">
-                <Link to="#" className="toAct">积分：24</Link>
+                <Link to="#" className="toAct">生日：{this.state.datetime1.replace('/','-').replace('/','-')}</Link>
                 <Divider type="vertical" />
-                <Link to="#" className="toAct">经验值：6</Link>
+                <Link to="#" className="toAct">性别：{this.state.sex}</Link>
               </div>
+              
               <div className="adit">
-                2019-03-19加入美食杰
+                2019-03-14加入美食杰
                 <Divider type="vertical" />
-                <Link to="#" className="toAct">编辑个人资料</Link>
+                <Link to="/u/user" className="toAct">编辑个人资料</Link>
               </div>
+              <p>个性签名:{this.state.qianming}</p>
             </div>
             <div className="cont-r"></div>
           </div>
@@ -82,11 +103,11 @@ class Comp extends Component {
               <TabPane tab="通知列表" key="1">
                 <div className="inform">
                   <p>亲爱的{ this.state.nick }，恭喜恭喜！欢迎初来乍到美食杰的你！从现在开始，只要多发菜谱，玩转论坛，“菜谱收集”的称号等着你呢！！我们期待你优秀的作品出炉！</p>
-                  <span>2019-03-13 09:05</span>
+                  {/* <span>2019-03-13 09:05</span> */}
                 </div>
                 <div className="inform">
-                  <p>亲爱的空白666，欢迎加入美食杰，快来开始您的美食生活吧~<br />在美食杰，您可以——<br />在菜谱大全里学做菜，发菜谱；<br />在家居馆（即将上线）里用积分兑换礼品，参加试用或秒杀活动；里发起话题、回复和活动，找到志同道合的小伙伴；<br />其他问题请联系美食小编，祝您生活愉快！</p>
-                  <span>2019-03-13 09:05</span>
+                  <p>亲爱的{this.state.nick}，欢迎加入美食杰，快来开始您的美食生活吧~<br />在美食杰，您可以——<br />在菜谱大全里学做菜，发菜谱；<br />在家居馆（即将上线）里用积分兑换礼品，参加试用或秒杀活动；里发起话题、回复和活动，找到志同道合的小伙伴；<br />其他问题请联系美食小编，祝您生活愉快！</p>
+                  {/* <span>2019-03-13 09:05</span> */}
                 </div>
               </TabPane>
               <TabPane tab="我的私信列表" key="2">

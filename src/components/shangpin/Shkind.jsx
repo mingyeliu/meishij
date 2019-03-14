@@ -9,7 +9,7 @@ const Comp = ({list, classn2})=>(
       <div className={classn2} key={index}>
         <div className="small_food_list " >
           < Link to={'/j/cart/'+item.id}>
-            <img src={item.image} alt="tupian" />1
+            <img src={item.image} alt="tupian" />
             
           </Link>
         </div>

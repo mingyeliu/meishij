@@ -9,11 +9,11 @@ import HealthList from '@/components/healthy/healthList';
 class Comp extends Component {
   render () {
     return (
-      <div className = "content">
+      <div className = "contenthealth">
         <div className="margin">
           <div className="top">
             <Link to="/home">
-              <img src="@/images/timer.png" alt="时间" />
+              <img src="https://s1.c.meishij.net/n/images/Icon-Small.png" alt="时间" />
               <span>工作、运动、学习、听音乐，是养脾的最佳时间，吃苦味和黄色食物有益脾经。</span>
             </Link>
           </div>
